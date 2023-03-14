@@ -1,0 +1,501 @@
+.frameChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-white);
+  box-shadow: 5px 4px 12px rgba(255, 168, 0, 0.25);
+  width: 166px;
+  height: 1117px;
+}
+.hogar1Icon {
+  position: absolute;
+  top: 334px;
+  left: 58px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+.burbujaDeDialogo1Icon,
+.calendario11,
+.cursoOnline1Icon,
+.examen1Icon {
+  position: absolute;
+  top: 434px;
+  left: 58px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.burbujaDeDialogo1Icon,
+.calendario11,
+.examen1Icon {
+  top: 534px;
+}
+.calendario11,
+.examen1Icon {
+  top: 634px;
+}
+.examen1Icon {
+  top: 734px;
+}
+.e,
+.v {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+}
+.e {
+  left: 71px;
+  color: var(--ffa800);
+  text-shadow: -2px 0 3px rgba(0, 0, 0, 0.25);
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+}
+.logout1Icon,
+.vParent {
+  position: absolute;
+  top: 49px;
+  left: 47px;
+  width: 71px;
+  height: 77px;
+}
+.logout1Icon {
+  top: 1010px;
+  left: 58px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+.frameItem {
+  position: absolute;
+  top: 327px;
+  left: 162px;
+  border-right: 4px solid var(--fff2);
+  box-sizing: border-box;
+  width: 0;
+  height: 65px;
+}
+.dashboard1,
+.rectangleParent {
+  position: absolute;
+  font-size: var(--font-size-45xl);
+}
+.rectangleParent {
+  top: 0;
+  left: 0;
+  width: 166px;
+  height: 1117px;
+  color: var(--d7ff);
+}
+.dashboard1 {
+  top: 49px;
+  left: 216px;
+  font-weight: 600;
+}
+.dashboardChild {
+  position: absolute;
+  top: 54px;
+  left: 1612px;
+  width: 66px;
+  height: 66px;
+  object-fit: cover;
+}
+.luisaPerez,
+.student {
+  position: absolute;
+  top: 61px;
+  left: 1480px;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+}
+.student {
+  top: 90px;
+  left: 1518px;
+  font-weight: 300;
+  color: var(--style);
+}
+.notificacion1 {
+  position: absolute;
+  top: 67px;
+  left: 1410px;
+}
+.groupChild {
+  top: 0;
+  left: 1.71px;
+  border-radius: 6.11px;
+  width: 188px;
+  height: 188px;
+}
+.div,
+.groupChild,
+.groupItem {
+  position: absolute;
+}
+.groupItem {
+  top: 0.19px;
+  left: 1.71px;
+  border-radius: 6.11px;
+  width: 188px;
+  height: 188px;
+}
+.div {
+  top: 64.2px;
+  left: 62.67px;
+  font-weight: 600;
+}
+.courseInProgress {
+  position: absolute;
+  top: 108.52px;
+  left: 0;
+  font-size: var(--font-size-2xl-4);
+}
+.dashboardInner,
+.ellipseParent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 191px;
+  height: 188px;
+}
+.dashboardInner {
+  top: 196px;
+  left: 216px;
+  font-size: 30.57px;
+}
+.ellipseIcon,
+.groupInner {
+  position: absolute;
+  top: 0;
+  left: 0.19px;
+  border-radius: 6.11px;
+  width: 188px;
+  height: 188px;
+}
+.ellipseIcon {
+  top: 0.19px;
+}
+.div1 {
+  position: absolute;
+  top: 64.2px;
+  left: 61.14px;
+  font-weight: 600;
+}
+.courseCompleted {
+  position: absolute;
+  top: 108.52px;
+  left: 1.53px;
+  font-size: var(--font-size-2xl-4);
+}
+.ellipseGroup,
+.groupDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 188px;
+  height: 188px;
+}
+.groupDiv {
+  top: 196px;
+  left: 517px;
+  font-size: 30.57px;
+}
+.taskCompleted {
+  position: absolute;
+  top: 108.52px;
+  left: 13.76px;
+  font-size: var(--font-size-2xl-4);
+}
+.dashboardInner1 {
+  position: absolute;
+  top: 196px;
+  left: 815px;
+  width: 188px;
+  height: 188px;
+  font-size: 30.57px;
+}
+.califications {
+  position: absolute;
+  top: 108.52px;
+  left: 32.1px;
+  font-size: var(--font-size-2xl-4);
+}
+.dashboardInner2 {
+  position: absolute;
+  top: 196px;
+  left: 1113px;
+  width: 188px;
+  height: 188px;
+  font-size: 30.57px;
+}
+.today,
+.upcomingTasks {
+  position: absolute;
+  top: 182px;
+  left: 1410px;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+}
+.today {
+  top: 602px;
+}
+.dashboardItem {
+  top: 220px;
+  left: 1409px;
+  border-top: 2px solid var(--e1e1e1);
+  width: 270px;
+  height: 2px;
+}
+.dashboardItem,
+.lineDiv,
+.rectangleDiv {
+  position: absolute;
+  box-sizing: border-box;
+}
+.lineDiv {
+  top: 640px;
+  left: 1409px;
+  border-top: 2px solid var(--e1e1e1);
+  width: 270px;
+  height: 2px;
+}
+.rectangleDiv {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-white);
+  border: 1px solid var(--d7ff);
+  width: 245px;
+  height: 46px;
+}
+.technology {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-weight: 500;
+}
+.rightArrow1Icon {
+  position: absolute;
+  top: 18px;
+  left: 225px;
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+.groupChild5,
+.rectangleGroup {
+  position: absolute;
+  top: 241px;
+  left: 1410px;
+  width: 245px;
+  height: 46px;
+}
+.groupChild5 {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-white);
+  border: 1px solid var(--ffa800);
+  box-sizing: border-box;
+}
+.am {
+  position: absolute;
+  top: 15px;
+  left: 108px;
+  font-weight: 300;
+  color: var(--style);
+}
+.rectangleContainer,
+.rectangleParent1 {
+  position: absolute;
+  top: 656px;
+  left: 1410px;
+  width: 245px;
+  height: 46px;
+}
+.rectangleParent1 {
+  top: 297px;
+}
+.rectangleParent2,
+.rectangleParent3,
+.rectangleParent4 {
+  position: absolute;
+  top: 712px;
+  left: 1410px;
+  width: 245px;
+  height: 46px;
+}
+.rectangleParent3,
+.rectangleParent4 {
+  top: 353px;
+}
+.rectangleParent4 {
+  top: 768px;
+}
+.rectangleParent5,
+.rectangleParent6,
+.rectangleParent7 {
+  position: absolute;
+  top: 409px;
+  left: 1410px;
+  width: 245px;
+  height: 46px;
+}
+.rectangleParent6,
+.rectangleParent7 {
+  top: 824px;
+}
+.rectangleParent7 {
+  top: 465px;
+}
+.rectangleParent10,
+.rectangleParent8,
+.rectangleParent9 {
+  position: absolute;
+  top: 880px;
+  left: 1410px;
+  width: 245px;
+  height: 46px;
+}
+.rectangleParent10,
+.rectangleParent9 {
+  top: 521px;
+}
+.rectangleParent10 {
+  top: 936px;
+}
+.dashboardChild1,
+.dashboardChild2,
+.dashboardChild3,
+.dashboardChild4 {
+  position: absolute;
+  top: 238.5px;
+  left: 1668.5px;
+  border-right: 5px solid var(--e1e1e1);
+  box-sizing: border-box;
+  width: 5px;
+  height: 331px;
+}
+.dashboardChild2,
+.dashboardChild3,
+.dashboardChild4 {
+  top: 653.5px;
+}
+.dashboardChild3,
+.dashboardChild4 {
+  top: 238.5px;
+  border-right: 5px solid var(--color-black);
+  height: 96px;
+}
+.dashboardChild4 {
+  top: 653.5px;
+}
+.myCourses {
+  position: absolute;
+  top: 421px;
+  left: 216px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.dashboardChild5,
+.dashboardChild6,
+.dashboardChild7 {
+  position: absolute;
+  top: 502px;
+  left: 221px;
+  border-radius: var(--br-6xs);
+  background-color: var(--color-white);
+  border: 2px solid var(--ffa800);
+  box-sizing: border-box;
+  width: 319px;
+  height: 480px;
+}
+.dashboardChild6,
+.dashboardChild7 {
+  left: 982px;
+}
+.dashboardChild7 {
+  left: 601px;
+}
+.dashboardChild8,
+.dashboardChild9,
+.rectangleIcon {
+  position: absolute;
+  top: 502px;
+  left: 221px;
+  border-radius: var(--br-6xs) var(--br-6xs) 0 0;
+  width: 319px;
+  height: 239px;
+  object-fit: cover;
+}
+.dashboardChild8,
+.dashboardChild9 {
+  left: 982px;
+}
+.dashboardChild9 {
+  left: 601px;
+}
+.qoremIpsumDolor,
+.qoremIpsumDolor1,
+.qoremIpsumDolor2 {
+  position: absolute;
+  top: 761px;
+  left: 247px;
+  text-align: center;
+  display: inline-block;
+  width: 267px;
+}
+.qoremIpsumDolor1,
+.qoremIpsumDolor2 {
+  left: 1008px;
+}
+.qoremIpsumDolor2 {
+  left: 627px;
+}
+.dashboardChild10,
+.dashboardChild11,
+.dashboardChild12 {
+  position: absolute;
+  top: 917px;
+  left: 327px;
+  border-radius: var(--br-5xs);
+  background-color: var(--d7ff);
+  width: 108px;
+  height: 34px;
+}
+.dashboardChild11,
+.dashboardChild12 {
+  left: 1088px;
+}
+.dashboardChild12 {
+  left: 707px;
+}
+.seeMore,
+.seeMore1,
+.seeMore2 {
+  position: absolute;
+  top: 925px;
+  left: 349px;
+  font-weight: 600;
+  color: var(--color-white);
+  text-align: center;
+}
+.seeMore1,
+.seeMore2 {
+  left: 1110px;
+}
+.seeMore2 {
+  left: 729px;
+}
+.dashboard {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 1117px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
