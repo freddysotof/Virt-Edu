@@ -35,7 +35,7 @@ export default function MyApp(props) {
         <Component {...pageProps} />
       </ThemeProvider>
     </React.Fragment>
-    
+
   );
 }
 
