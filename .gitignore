@@ -79,15 +79,14 @@ fabric.properties
 .DS_*
 *.log
 logs
-*/.backup.*
-*/.back.*
+**/*.backup.*
+**/*.back.*
 
 node_modules
 bower_components
 
-.sublime
+*.sublime*
 
 psd
 thumb
 sketch
-  
