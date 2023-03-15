@@ -7,7 +7,7 @@ import { sizing } from "@mui/system";
 
 import styles from "../../pages/Login/login.module.css";
 
-function Login_Container() {
+function Login_Container({setIsLogged}) {
   return (
     <React.Fragment>
       <Container maxWidth="md" className={styles.component1frame2}>
@@ -33,7 +33,7 @@ function Login_Container() {
           Forgot password?
         </a>
 
-        <Btn_login />
+        <Btn_login  setIsLogged={setIsLogged} />
         <User />
         <Password />
       </Container>
