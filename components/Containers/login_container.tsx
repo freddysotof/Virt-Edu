@@ -6,6 +6,7 @@ import Btn_login from "./Buttons/Btn_Login/btn_login";
 import { sizing } from "@mui/system";
 
 import styles from "../../pages/Login/login.module.css";
+import Dashboard from "../../pages/Dashboard/dashboard";
 
 function Login_Container({setIsLogged}) {
   return (
@@ -42,3 +43,15 @@ function Login_Container({setIsLogged}) {
 }
 
 export default Login_Container;
+// Botones de redireccion : use navigate
+// <App>
+//   <Routing>
+//     {
+//       isLogged? <ContentLayout>
+//         <Routes path={'/dashborad'} element={<Dashboard/>}></Routes>
+//         <Routes path={'/courses'} element={<Courses/>}></Routes>
+//       </ContentLayout>
+//       : <AuthLayout></AuthLayout>
+//     }
+//   </Routing>
+// </App>
