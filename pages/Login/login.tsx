@@ -6,7 +6,7 @@ import Logo from "../../components/Logo/logo";
 import Btn_ayuda from "../../components/Containers/Buttons/Btn_Ayuda/btn_ayuda";
 import Login_Container from "../../components/Containers/login_container";
 
-function LogIn () {
+function LogIn ({setIsLogged}) {
     //const router = useRouter();
   
     //const onRectangleButtonClick = useCallback(() => { router.push("/dashboard"); }, [router]);
@@ -15,7 +15,7 @@ function LogIn () {
       <div className={styles.registerlogIn}>
         <Logo/>
         <Btn_ayuda/>
-        <Login_Container/>
+        <Login_Container  setIsLogged={setIsLogged} />
       </div>
     );
   };

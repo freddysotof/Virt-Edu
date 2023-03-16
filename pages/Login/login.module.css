@@ -65,13 +65,13 @@
     position: absolute;
     top: 99px;
     left: 31px;
-    width: 672px;
+    width: auto;
     height: 3px;
     object-fit: cover;
   }
   .component1frame2Inner {
     left: 314px;
-    width: 106px;
+    width: auto;
   }
   .rectangleButton {
     cursor: pointer;
@@ -107,13 +107,26 @@
   .component1frame2Child1 {
     top: 203px;
   }
+
+  .forgotPassword {
+    text-decoration: none;
+    position: absolute;
+    top: 287px;
+    left: 527px;
+    font-size: 18px;
+    font-weight: 700;
+    color: orange;
+    display: inline-block;
+    width: 176px;
+    height: 31px;
+  }
   .component1frame2 {
     position: relative;
     top: 188px;
     left: 20px;
-    width: 734px;
+    width: auto;
     height: 355px;
-    
+
   }
   .registerlogIn {
     position: relative;
@@ -129,3 +142,5 @@
     color: var(--fff2);
     font-family: var(--font-inter);
   }
+
+  

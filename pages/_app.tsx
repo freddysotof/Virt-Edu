@@ -7,7 +7,9 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 import "./global.css";
 
-export default function MyApp(props) {
+
+
+function MyApp(props: any) {     // Function. React.FC = React.FunctionalComponent
   const { Component, pageProps } = props;
 
   React.useEffect(() => {
@@ -35,9 +37,10 @@ export default function MyApp(props) {
         <Component {...pageProps} />
       </ThemeProvider>
     </React.Fragment>
-
+    
   );
 }
+export default MyApp;
 
 MyApp.propTypes = {
   Component: PropTypes.elementType.isRequired,
