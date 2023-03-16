@@ -2,8 +2,8 @@ import React from "react";
 import type { NextPage } from "next";
 import { useCallback } from "react";
 import styles from "./dashboard.module.css";
-import CoursesBox from "../../components/Containers/CoursesBox";
-import { Layout } from "../../layout/layout";
+import CoursesBox from "../../components/CoursesBox";
+
 
 const Dashboard: NextPage = () => {
   const onCursoOnline1Click = useCallback(() => {
@@ -182,7 +182,7 @@ const Dashboard: NextPage = () => {
       <div className={styles.dashboardChild4} />
       <div className={styles.dashboardChild5} />
       <div className={styles.dashboardChild6} />
-      
+
       <CoursesBox/>
       
       <img

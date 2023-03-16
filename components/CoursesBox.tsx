@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "../dashboard.module.css"
+import styles from "../components/dashboard.module.css"
 
 function CoursesBox() {
   return (
