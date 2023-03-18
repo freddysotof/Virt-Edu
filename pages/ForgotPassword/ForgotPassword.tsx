@@ -3,7 +3,6 @@
 import React from 'react'
 import Logo from "../../components/Logo/logo";
 import Btn_ayuda from "../../components/Containers/Buttons/btn_ayuda";
-import Forgot_Password_Container from '../../components/Containers/forgot_password_container';
 import { TextField, InputAdornment, Icon, IconButton } from "@mui/material";
 
 import styles from "../ForgotPassword/forgotpassword.module.css"
