@@ -2,12 +2,13 @@ import React from "react";
 import { Container } from "@mui/material";
 import User from "./Textfields/user";
 import Password from "./Textfields/password";
-import Btn_login from "./Buttons/Btn_Login/btn_login";
-import { sizing } from "@mui/system";
+import Btn_login from "./Buttons/btn_login";
+import type { NextPage } from "next";
+import { useRouter } from "next/router";
 
 import styles from "../../pages/Login/login.module.css";
-import Dashboard from "../../pages/Dashboard/dashboard";
 
+// const Login_Container: NextPage = ( {setisLogged} ) => {
 function Login_Container({setIsLogged}) {
   return (
     <React.Fragment>
@@ -30,7 +31,7 @@ function Login_Container({setIsLogged}) {
           src="/Assets/images/line-2@2x.png"
         />
 
-        <a className={styles.forgotPassword} href="">
+        <a className={styles.forgotPassword} href="/ForgotPassword/ForgotPassword">
           Forgot password?
         </a>
 

@@ -3,7 +3,7 @@ import { useCallback } from "react";
 import { useRouter } from "next/router";
 import styles from "./login.module.css";
 import Logo from "../../components/Logo/logo";
-import Btn_ayuda from "../../components/Containers/Buttons/Btn_Ayuda/btn_ayuda";
+import Btn_ayuda from "../../components/Containers/Buttons/btn_ayuda";
 import Login_Container from "../../components/Containers/login_container";
 
 function LogIn ({setIsLogged}) {

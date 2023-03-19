@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import { useCallback } from "react";
 
-import styles from "../../../../pages/Login/login.module.css"
+import styles from "../../../pages/Login/login.module.css"
 
 function Btn_ayuda() {
   const router = useRouter();
