@@ -25,9 +25,11 @@ export const Layout: NextPage = ({children}) => {
 
   return (
     <div className={styles.dashboard}>
+       
        <SideBar/>
        <NavBar/>
        {children}
+       
      </div>
 
     )

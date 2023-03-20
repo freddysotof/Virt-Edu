@@ -1,14 +1,16 @@
 import type { NextPage } from "next";
 import { useCallback } from "react";
 import styles from "./dashboard.module.css";
+import { Link } from 'react-router-dom';
 
 export const SideBar: NextPage = () => {
     const onCursoOnline1Click = useCallback(() => {
         // Please sync "Courses" to the project
       }, []);
     
-      const onBurbujaDeDialogo1Click = useCallback(() => {
-        // Please sync "Messages" to the project
+      const onMessagesClick = useCallback(() => {
+        console.log('hi');
+        <Link to=''></Link>
       }, []);
     
       const onCalendario11Click = useCallback(() => {
@@ -43,7 +45,7 @@ export const SideBar: NextPage = () => {
     </button>
     <button
       className={styles.burbujaDeDialogo1}
-      onClick={onBurbujaDeDialogo1Click}
+      onClick={onMessagesClick}
     >
       <img className={styles.groupIcon1} alt="" src="/Assets/svg/group1.svg" />
     </button>

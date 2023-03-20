@@ -1,0 +1,35 @@
+.contactsBox {
+    background-color: white;
+    width: 600px;
+    height: 1200px;
+    border: 1px solid #21afff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 0 10px rgba(33, 175, 255, 0.5);
+    margin: 150px 0 50px 50px;
+    position: relative;
+    display: flex; /* Agregamos esta propiedad */
+    justify-content: space-between; /* Agregamos esta propiedad */
+    width: 30%;
+  }
+  .chat {
+    background-color: #F6F7F8;
+  box-shadow: 0px 4px 10px rgba(25, 187, 129, 0.25);
+  width: calc(100% - 350px);
+  margin-top: 150px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: white;
+  border-top-right-radius: 10px;
+  position: relative;
+  height: 1200px;
+
+  }
+
+  .messages {
+    display: flex;
+  }

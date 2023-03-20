@@ -1,0 +1,17 @@
+.newChat {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #21afff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 20px;
+    box-sizing: border-box; /* Agrega box-sizing */
+  }
+
+  .newChatIcon {
+    color: white;
+  }
