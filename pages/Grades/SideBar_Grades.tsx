@@ -4,32 +4,19 @@ import styles from "../Grades/SideBar_Grades.module.css";
 import Link from "next/link";
 
 const SideBar_Grades: NextPage = () => {
-    const onHogar1Click = useCallback(() => {
-      // Please sync "Dashboard" to the project
-    }, []);
-  
-    const onCursoOnline1Click = useCallback(() => {
-      // Please sync "Messages" to the project
-    }, []);
-  
-    const onBurbujaDeDialogo1Click = useCallback(() => {
-      // Please sync "Messages" to the project
-    }, []);
-  
-    const onCalendario11Click = useCallback(() => {
-      // Please sync "Schedule" to the project
-    }, []);
   
     return (
         <Fragment>
       <div className={styles.rectangleParent}>
         <div className={styles.frameChild} />
+
         <button className={styles.hogar1}>
         <Link href="/Dashboard/Home">
           <img className={styles.groupIcon} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group.svg" />
           </Link>
         </button>
-        <button className={styles.cursoOnline1} onClick={onCursoOnline1Click}>
+
+        <button className={styles.cursoOnline1}>
           <img className={styles.vectorIcon} alt="" src="/Assets/svg/Highlighted_Grades_Icon/vector.svg" />
           <img className={styles.vectorIcon1} alt="" src="/Assets/svg/Highlighted_Grades_Icon/vector1.svg" />
           <img className={styles.vectorIcon2} alt="" src="/Assets/svg/Highlighted_Grades_Icon/vector2.svg" />
@@ -45,15 +32,21 @@ const SideBar_Grades: NextPage = () => {
           <img className={styles.vectorIcon12} alt="" src="/Assets/svg/Highlighted_Grades_Icon/vector12.svg" />
           <img className={styles.vectorIcon13} alt="" src="/Assets/svg/Highlighted_Grades_Icon/vector13.svg" />
         </button>
-        <button
-          className={styles.burbujaDeDialogo1}
-          onClick={onBurbujaDeDialogo1Click}
-        >
+
+        {/* Actualizar href a page entero */}
+        <Link href="/Chat/SideBar_Chat">
+        <button className={styles.burbujaDeDialogo1}>
           <img className={styles.groupIcon1} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group1.svg" />
         </button>
-        <button className={styles.calendario11} onClick={onCalendario11Click}>
+        </Link>
+
+        {/* Actualizar href a page entero */}
+        <Link href="/Schedule/SideBar_Schedule">
+        <button className={styles.calendario11}>
           <img className={styles.groupIcon2} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group2.svg" />
         </button>
+        </Link>
+
         <button className={styles.examen1}>
           <img className={styles.groupIcon3} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group3.svg" />
           <img className={styles.groupIcon4} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group4.svg" />
@@ -68,10 +61,12 @@ const SideBar_Grades: NextPage = () => {
           <img className={styles.groupIcon13} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group13.svg" />
           <img className={styles.groupIcon14} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group14.svg" />
         </button>
+
         <button className={styles.vParent}>
           <div className={styles.v}>V</div>
           <div className={styles.e}>E</div>
         </button>
+
         <button className={styles.logout1}>
           <img className={styles.vectorIcon14} alt="" src="/Assets/svg/Highlighted_Grades_Icon/vector14.svg" />
           <img className={styles.vectorIcon15} alt="" src="/Assets/svg/Highlighted_Grades_Icon/vector15.svg" />
@@ -79,6 +74,7 @@ const SideBar_Grades: NextPage = () => {
           <img className={styles.vectorIcon17} alt="" src="/Assets/svg/Highlighted_Grades_Icon/vector17.svg" />
           <img className={styles.vectorIcon18} alt="" src="/Assets/svg/Highlighted_Grades_Icon/vector18.svg" />
         </button>
+
         <div className={styles.frameItem} />
       </div>
       </Fragment>
