@@ -1,3 +1,8 @@
+.messages{
+margin-left: 180px;
+
+}
+
 .contactsBox {
     background-color: white;
     width: 600px;
@@ -15,7 +20,7 @@
     width: 30%;
   }
   .chat {
-    background-color: #F6F7F8;
+  background-color: #F6F7F8;
   box-shadow: 0px 4px 10px rgba(25, 187, 129, 0.25);
   width: calc(100% - 350px);
   margin-top: 150px;
@@ -27,6 +32,8 @@
   border-top-right-radius: 10px;
   position: relative;
   height: 1200px;
+  display: flex;
+  flex-direction: column;
 
   }
 

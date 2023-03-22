@@ -1,10 +1,19 @@
 import React from 'react';
 import classes from './SendMessage.module.css';
+import { MdSend } from 'react-icons/md';
+import { FaSmile } from 'react-icons/fa';
 
 function SendMessage() {
   return (
     <div className={classes.sendMessage}>
-      {/* aquí va el contenido del formulario de envío de mensaje */}
+      <button className={classes.emojiButton}>
+        <FaSmile />
+      </button>
+      <input type="text" placeholder="Type a message..." />
+      <button className={classes.sendButton}>
+        <MdSend />
+      </button>
+      
     </div>
   );
 }
