@@ -5,10 +5,10 @@ import { Layout } from "../layout/Layout";
 import Messages from "./Messages/Messages";
 function VirtEdu() {
   const [isLogged, setIsLogged] = useState(false);
-  return (<Messages/>)
+  return (isLogged ?  <Layout></Layout>: <Login setIsLogged={setIsLogged} />)
   
   
-//isLogged ?  <Layout><Dashboard/></Layout>: <Login setIsLogged={setIsLogged} />}</>; // Layout es el sidebar + navbar
+// // Layout es el sidebar + navbar
 }
 
 export default VirtEdu;
