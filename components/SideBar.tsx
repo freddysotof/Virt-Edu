@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
-import { useCallback } from "react";
+import { Fragment, useCallback } from "react";
 import styles from "./dashboard.module.css";
+import Link from "next/link";
+import Grades from "../pages/Grades/Grades";
 
 export const SideBar: NextPage = () => {
     const onCursoOnline1Click = useCallback(() => {
@@ -20,10 +22,13 @@ export const SideBar: NextPage = () => {
       }, []);
 
     return (
+      <Fragment>
     <div className={styles.rectangleParent}>
     <div className={styles.frameChild} />
     <button className={styles.hogar1}>
+      <Link href="">
       <img className={styles.groupIcon} alt="" src="/Assets/svg/group.svg" />
+      </Link>
     </button>
     <button className={styles.cursoOnline1} onClick={onCursoOnline1Click}>
       <img className={styles.vectorIcon} alt="" src="/Assets/svg/vector.svg" />
@@ -54,7 +59,9 @@ export const SideBar: NextPage = () => {
       <img className={styles.groupIcon3} alt="" src="/Assets/svg/group3.svg" />
       <img className={styles.groupIcon4} alt="" src="/Assets/svg/group4.svg" />
       <img className={styles.groupIcon5} alt="" src="/Assets/svg/group5.svg" />
+      <Link href="/Grades/Grades">
       <img className={styles.groupIcon6} alt="" src="/Assets/svg/group6.svg" />
+      </Link>
       <img className={styles.groupIcon7} alt="" src="/Assets/svg/group7.svg" />
       <img className={styles.groupIcon8} alt="" src="/Assets/svg/group8.svg" />
       <img className={styles.groupIcon9} alt="" src="/Assets/svg/group9.svg" />
@@ -77,5 +84,6 @@ export const SideBar: NextPage = () => {
     </button>
     <div className={styles.frameItem} />
   </div>
+  </Fragment>
     )
 }

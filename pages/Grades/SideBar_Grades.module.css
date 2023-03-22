@@ -1,0 +1,501 @@
+.frameChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 5px 4px 12px rgba(255, 168, 0, 0.25);
+  width: 166px;
+  height: 1117px;
+}
+.groupIcon,
+.hogar1 {
+  position: absolute;
+  overflow: hidden;
+}
+.groupIcon {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+.hogar1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 334px;
+  left: 58px;
+  width: 50px;
+  height: 50px;
+}
+.vectorIcon,
+.vectorIcon1 {
+  position: absolute;
+  height: 30%;
+  width: 60%;
+  top: 15%;
+  right: 20%;
+  bottom: 55%;
+  left: 20%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.vectorIcon1 {
+  height: 26.08%;
+  width: 43.33%;
+  top: 32.26%;
+  right: 28.33%;
+  bottom: 41.67%;
+  left: 28.33%;
+}
+.vectorIcon2,
+.vectorIcon3,
+.vectorIcon4,
+.vectorIcon5,
+.vectorIcon6,
+.vectorIcon7 {
+  position: absolute;
+  height: 3.33%;
+  width: 31.67%;
+  top: 28.33%;
+  right: 20%;
+  bottom: 68.33%;
+  left: 48.33%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.vectorIcon3,
+.vectorIcon4,
+.vectorIcon5,
+.vectorIcon6,
+.vectorIcon7 {
+  height: 18.33%;
+  width: 3.33%;
+  bottom: 53.33%;
+  left: 76.67%;
+}
+.vectorIcon4,
+.vectorIcon5,
+.vectorIcon6,
+.vectorIcon7 {
+  height: 10%;
+  top: 25%;
+  right: 48.33%;
+  bottom: 65%;
+  left: 48.33%;
+}
+.vectorIcon5,
+.vectorIcon6,
+.vectorIcon7 {
+  height: 8.34%;
+  width: 6.67%;
+  top: 43.33%;
+  right: 20%;
+  bottom: 48.33%;
+  left: 73.33%;
+}
+.vectorIcon6,
+.vectorIcon7 {
+  right: 16.67%;
+  left: 76.67%;
+}
+.vectorIcon7 {
+  height: 8.33%;
+  width: 3.33%;
+  top: 41.67%;
+  right: 48.33%;
+  bottom: 50%;
+  left: 48.33%;
+}
+.vectorIcon10,
+.vectorIcon11,
+.vectorIcon12,
+.vectorIcon13,
+.vectorIcon8,
+.vectorIcon9 {
+  position: absolute;
+  height: 63.33%;
+  width: 100%;
+  top: 1.67%;
+  right: 0;
+  bottom: 35%;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.vectorIcon10,
+.vectorIcon11,
+.vectorIcon12,
+.vectorIcon13,
+.vectorIcon9 {
+  height: 16.67%;
+  top: 61.67%;
+  bottom: 21.67%;
+}
+.vectorIcon10,
+.vectorIcon11,
+.vectorIcon12,
+.vectorIcon13 {
+  height: 3.33%;
+  width: 13.33%;
+  top: 68.33%;
+  right: 43.33%;
+  bottom: 28.33%;
+  left: 43.33%;
+}
+.vectorIcon11,
+.vectorIcon12,
+.vectorIcon13 {
+  height: 56.67%;
+  width: 86.67%;
+  top: 8.33%;
+  right: 6.67%;
+  bottom: 35%;
+  left: 6.67%;
+}
+.vectorIcon12,
+.vectorIcon13 {
+  height: 10%;
+  width: 53.33%;
+  top: 88.33%;
+  right: 23.33%;
+  bottom: 1.67%;
+  left: 23.33%;
+}
+.vectorIcon13 {
+  height: 16.67%;
+  width: 40%;
+  top: 75%;
+  right: 30%;
+  bottom: 8.33%;
+  left: 30%;
+}
+.cursoOnline1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 434px;
+  left: 58px;
+  width: 50px;
+  height: 50px;
+}
+.burbujaDeDialogo1,
+.cursoOnline1,
+.groupIcon1 {
+  position: absolute;
+  overflow: hidden;
+}
+.groupIcon1 {
+  height: 85.09%;
+  width: 100%;
+  top: 7.46%;
+  right: 0;
+  bottom: 7.46%;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+.burbujaDeDialogo1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 534px;
+  left: 58px;
+  width: 50px;
+  height: 50px;
+}
+.groupIcon2 {
+  height: 95.83%;
+  width: 95.83%;
+  top: 2.08%;
+  right: 2.08%;
+  bottom: 2.08%;
+  left: 2.08%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.calendario11,
+.groupIcon2,
+.groupIcon3 {
+  position: absolute;
+  overflow: hidden;
+}
+.calendario11 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 634px;
+  left: 58px;
+  width: 50px;
+  height: 50px;
+}
+.groupIcon3 {
+  height: 10%;
+  width: 10%;
+  top: 30%;
+  right: 38.33%;
+  bottom: 60%;
+  left: 51.67%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.groupIcon4,
+.groupIcon5,
+.groupIcon6,
+.groupIcon7,
+.groupIcon8,
+.groupIcon9 {
+  position: absolute;
+  height: 18.95%;
+  width: 16.43%;
+  top: 25%;
+  right: 50.12%;
+  bottom: 56.05%;
+  left: 33.45%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.groupIcon5,
+.groupIcon6,
+.groupIcon7,
+.groupIcon8,
+.groupIcon9 {
+  height: 36.67%;
+  width: 46.67%;
+  top: 16.67%;
+  right: 28.33%;
+  bottom: 46.67%;
+  left: 25%;
+}
+.groupIcon6,
+.groupIcon7,
+.groupIcon8,
+.groupIcon9 {
+  height: 100%;
+  width: 83.33%;
+  top: 0;
+  right: 11.67%;
+  bottom: 0;
+  left: 5%;
+}
+.groupIcon7,
+.groupIcon8,
+.groupIcon9 {
+  height: 3.33%;
+  width: 3.33%;
+  top: 58.33%;
+  right: 66.67%;
+  bottom: 38.33%;
+  left: 30%;
+}
+.groupIcon8,
+.groupIcon9 {
+  width: 36.67%;
+  right: 26.67%;
+  left: 36.67%;
+}
+.groupIcon9 {
+  width: 50%;
+  top: 65%;
+  bottom: 31.67%;
+  left: 23.33%;
+}
+.groupIcon10,
+.groupIcon11 {
+  position: absolute;
+  top: 71.67%;
+  overflow: hidden;
+}
+.groupIcon10 {
+  height: 3.33%;
+  width: 43.33%;
+  right: 33.33%;
+  bottom: 25%;
+  left: 23.33%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.groupIcon11 {
+  height: 21.67%;
+  right: 5%;
+  bottom: 6.67%;
+  left: 91.67%;
+}
+.groupIcon11,
+.groupIcon12,
+.groupIcon13 {
+  width: 3.33%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.groupIcon12 {
+  position: absolute;
+  height: 3.33%;
+  top: 96.67%;
+  right: 5%;
+  bottom: 0;
+  left: 91.67%;
+  overflow: hidden;
+}
+.groupIcon13 {
+  height: 21.67%;
+  top: 23.33%;
+  right: 88.33%;
+  bottom: 55%;
+  left: 8.33%;
+}
+.examen1,
+.groupIcon13,
+.groupIcon14 {
+  position: absolute;
+  overflow: hidden;
+}
+.groupIcon14 {
+  height: 3.33%;
+  width: 3.33%;
+  top: 16.67%;
+  right: 88.33%;
+  bottom: 80%;
+  left: 8.33%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.examen1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 734px;
+  left: 58px;
+  width: 50px;
+  height: 50px;
+}
+.v {
+  top: 0;
+  left: 0;
+  font-size: var(--font-size-45xl);
+  font-weight: 600;
+  font-family: var(--font-inter);
+  color: var(--d7ff);
+  text-align: left;
+}
+.e,
+.v,
+.vParent {
+  position: absolute;
+}
+.e {
+  top: 77px;
+  left: 71px;
+  font-size: var(--font-size-45xl);
+  font-weight: 600;
+  font-family: var(--font-inter);
+  color: #ffa800;
+  text-align: left;
+  text-shadow: -2px 0 3px rgba(0, 0, 0, 0.25);
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+}
+.vParent {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 49px;
+  left: 47px;
+  width: 71px;
+  height: 77px;
+}
+.vectorIcon14,
+.vectorIcon15 {
+  position: absolute;
+  height: 6.25%;
+  width: 45.83%;
+  top: 40.63%;
+  right: 0;
+  bottom: 53.12%;
+  left: 54.16%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.vectorIcon15 {
+  height: 37.51%;
+  width: 21.88%;
+  top: 24.99%;
+  bottom: 37.5%;
+  left: 78.12%;
+}
+.vectorIcon16,
+.vectorIcon17 {
+  top: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+.vectorIcon16 {
+  position: absolute;
+  height: 100%;
+  width: 41.67%;
+  right: 58.33%;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+.vectorIcon17 {
+  height: 33.33%;
+  width: 61.46%;
+  right: 33.34%;
+  bottom: 66.66%;
+  left: 5.21%;
+}
+.logout1,
+.vectorIcon17,
+.vectorIcon18 {
+  position: absolute;
+  overflow: hidden;
+}
+.vectorIcon18 {
+  height: 33.33%;
+  width: 31.25%;
+  top: 54.17%;
+  right: 33.33%;
+  bottom: 12.5%;
+  left: 35.42%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.logout1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 1010px;
+  left: 58px;
+  width: 50px;
+  height: 50px;
+}
+.frameItem {
+  position: absolute;
+  top: 726px;
+  left: 162px;
+  border-right: 4px solid var(--fff2);
+  box-sizing: border-box;
+  width: 0;
+  height: 65px;
+}
+.rectangleParent {
+  position: relative;
+  width: 100%;
+  height: 1117px;
+}

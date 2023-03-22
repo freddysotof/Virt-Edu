@@ -1,15 +1,18 @@
 // our-domain.com/ForgotPassword/ForgotPassword
 
 import React from 'react'
-import Logo from "../../components/Logo/logo";
-import Btn_ayuda from "../../components/Containers/Buttons/btn_ayuda";
 import { TextField, InputAdornment, Icon, IconButton } from "@mui/material";
 
 import styles from "../ForgotPassword/forgotpassword.module.css"
 
-
 function ForgotPassword() {
+  // const router = useRouter();
+  // const ForgotPswrd = router.query.ForgotPassword;
+  // Send a request to the backend API
+  // to fetch the ForgotPswrd item with ForgotPswrd
+
   return (
+    
     <div className={styles.passwordReset}>
       <div className={styles.virtedu}>
         <span>Virt</span>
@@ -53,7 +56,7 @@ function ForgotPassword() {
           color="primary"
           variant="filled"
           type="text"
-          label="Id"
+          label="ID"
           size="medium"
           margin="none"
           required
@@ -66,11 +69,13 @@ function ForgotPassword() {
         </button> */}
       </div>
       <h2 className={styles.enterYourInstitutional}>
-        Enter your institutional Id
+        Enter your institutional ID
       </h2>
       <div className={styles.submit}>Submit</div>
       <h1 className={styles.passwordReset1}>Password Reset</h1>
     </div>
+
+
     // <div className={styles.registerlogIn}>
     //     <Logo/>
     //     <Btn_ayuda/>
