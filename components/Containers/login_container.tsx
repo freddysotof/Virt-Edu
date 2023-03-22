@@ -3,15 +3,15 @@ import { Container } from "@mui/material";
 import User from "./Textfields/user";
 import Password from "./Textfields/password";
 import Btn_login from "./Buttons/btn_login";
-import type { NextPage } from "next";
-import { useRouter } from "next/router";
+import Link from "next/link";
+import { Fragment } from "react";
 
 import styles from "../../pages/Login/login.module.css";
 
 // const Login_Container: NextPage = ( {setisLogged} ) => {
 function Login_Container({setIsLogged}) {
   return (
-    <React.Fragment>
+    <Fragment>
       <Container maxWidth="md" className={styles.component1frame2}>
         <div className={styles.component1frame2Child} />
 
@@ -30,16 +30,17 @@ function Login_Container({setIsLogged}) {
           alt=""
           src="/Assets/images/line-2@2x.png"
         />
-
-        <a className={styles.forgotPassword} href="/ForgotPassword/ForgotPassword">
+        <Link href="/ForgotPassword/ForgotPassword">
+        <a className={styles.forgotPassword}>
           Forgot password?
         </a>
+        </Link>
 
         <Btn_login  setIsLogged={setIsLogged} />
         <User />
         <Password />
       </Container>
-    </React.Fragment>
+    </Fragment>
   );
 }
 

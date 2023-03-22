@@ -1,8 +1,11 @@
-import React from "react";
+// our-domain.com/Dashboard/dashboard
+
+import React, { Fragment } from "react";
 import type { NextPage } from "next";
 import { useCallback } from "react";
 import styles from "./dashboard.module.css";
 import CoursesBox from "../../components/CoursesBox";
+import Link from "next/link";
 
 
 const Dashboard: NextPage = () => {
@@ -23,9 +26,8 @@ const Dashboard: NextPage = () => {
   }, []);
 
   return (
+    <Fragment>
     <>
-      <div className={styles.courseCompleted}>Course completed</div>
-      <div className={styles.div1}>33%</div>
       <div className={styles.upcomingTasks}>Upcoming Tasks</div>
       <div className={styles.today}>Today</div>
       <div className={styles.dashboardItem} />
@@ -185,6 +187,8 @@ const Dashboard: NextPage = () => {
 
       <CoursesBox/>
       
+      {/* <div className={styles.courseCompleted}>Course completed</div>
+      <div className={styles.div1}>33%</div>
       <img
         className={styles.ellipseIcon}
         alt=""
@@ -233,8 +237,9 @@ const Dashboard: NextPage = () => {
         className={styles.dashboardChild19}
         alt=""
         src="/Assets/svg/ellipse-15.svg"
-      />
+      /> */}
     </>
+    </Fragment>
   );
 };
 
