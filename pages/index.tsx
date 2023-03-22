@@ -3,6 +3,7 @@ import Dashboard from "./Dashboard/dashboard";
 import { useState } from "react";
 import { Layout } from "../layout/Layout";
 import Grades from "./Grades/Grades";
+import SideBar_Schedule from "./Schedule/SideBar_Schedule";
 function VirtEdu() {
   const [isLogged, setIsLogged] = useState(false);
   return (
