@@ -15,7 +15,7 @@ display: flex;
     border-bottom-right-radius: 0;
     margin: 150px 0 50px 50px;
     position: relative;
-    justify-content: space-between; /* Agregamos esta propiedad */
+    justify-content: space-between;
   }
 .chat {
   box-shadow: 10px 0 30px rgba(33, 175, 255, 0.5); 
@@ -42,5 +42,5 @@ display: flex;
 
   .contactsHead{
     display:flex;
-    margin-bottom: 100px; /* Add some margin here */
+    margin-bottom: 100px; 
   }

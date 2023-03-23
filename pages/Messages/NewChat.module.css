@@ -9,7 +9,6 @@
   cursor: pointer;
   margin-top: 40px;
   box-sizing: border-box;
-  /* Agregamos la animación */
   transition: all 0.3s ease-in-out;
 }
 .newChat:hover {

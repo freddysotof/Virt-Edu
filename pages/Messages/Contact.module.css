@@ -22,7 +22,7 @@
 .details {
   display: flex;
   flex-direction: column;
-  flex-grow: 0.8; /* Cambia el valor de flex-grow a 0.8 */
+  flex-grow: 0.8; 
   font-size: 18px;
 }
 
@@ -46,5 +46,5 @@
   height: 35px;
   border-radius: 50%;
   font-size: 18px;
-  margin-right: 5px; /* Agrega un margen derecho */
+  margin-right: 5px;
 }
