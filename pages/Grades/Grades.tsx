@@ -1,20 +1,12 @@
 
 import React from "react";
-import type { NextPage } from "next";
-import { useCallback } from "react";
-import { SideBar } from "../../components/SideBar";
-import SideBar_Grades from "./SideBar_Grades";
-import { NavBar_Grades } from "./NavBar_Grades";
-
+import { Layout } from "../../layout/Layout";
 
 import styles from "../Grades/Grades.module.css"
 
 function Grades() {
   return (
-    <>
-      {/* <h1 className={styles.grades1}>Grades</h1> */}
-      <SideBar_Grades/>
-      <NavBar_Grades/>
+    <Layout>
 
       <div className={styles.frameParent}>
         <div className={styles.frameGroup}>
@@ -139,7 +131,7 @@ function Grades() {
           </p>
         </div>
       </div>
-    </>
+    </Layout>
   );
 }
 

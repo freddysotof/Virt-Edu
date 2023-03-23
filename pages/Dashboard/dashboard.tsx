@@ -1,33 +1,14 @@
 // our-domain.com/Dashboard/dashboard
 
 import React, { Fragment } from "react";
-import type { NextPage } from "next";
-import { useCallback } from "react";
 import styles from "./dashboard.module.css";
 import CoursesBox from "../../components/CoursesBox";
-import Link from "next/link";
 
 
-const Dashboard: NextPage = () => {
-  const onCursoOnline1Click = useCallback(() => {
-    // Please sync "Courses" to the project
-  }, []);
-
-  const onBurbujaDeDialogo1Click = useCallback(() => {
-    // Please sync "Messages" to the project
-  }, []);
-
-  const onCalendario11Click = useCallback(() => {
-    // Please sync "Schedule" to the project
-  }, []);
-
-  const onExamen1Click = useCallback(() => {
-    // Please sync "Grades" to the project
-  }, []);
+function Dashboard(){
 
   return (
     <Fragment>
-    <>
       <div className={styles.upcomingTasks}>Upcoming Tasks</div>
       <div className={styles.today}>Today</div>
       <div className={styles.dashboardItem} />
@@ -36,26 +17,24 @@ const Dashboard: NextPage = () => {
         <div className={styles.groupChild} />
         <div className={styles.technology}>Technology</div>
         <div className={styles.may1216}>May 12-16</div>
+
         <button className={styles.rightArrow1}>
-          <img
-            className={styles.groupIcon16}
-            alt=""
-            src="/Assets/svg/group16.svg"
-          />
+          <img className={styles.groupIcon16} alt="" src="/Assets/svg/group16.svg"/>
         </button>
+
       </button>
+
       <div className={styles.rectangleContainer}>
         <div className={styles.groupItem} />
         <div className={styles.math}>Technology</div>
         <div className={styles.am}>10 AM</div>
+
         <button className={styles.rightArrow1}>
-          <img
-            className={styles.groupIcon16}
-            alt=""
-            src="/Assets/svg/group17.svg"
-          />
+          <img className={styles.groupIcon16} alt="" src="/Assets/svg/group17.svg"/>
         </button>
+
       </div>
+
       <div className={styles.groupDiv}>
         <div className={styles.groupChild} />
         <div className={styles.math}>Math</div>
@@ -238,7 +217,6 @@ const Dashboard: NextPage = () => {
         alt=""
         src="/Assets/svg/ellipse-15.svg"
       /> */}
-    </>
     </Fragment>
   );
 };
