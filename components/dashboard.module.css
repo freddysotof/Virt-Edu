@@ -485,9 +485,48 @@
     width: 50px;
     height: 50px;
   }
-  .frameItem {
+  .frameItemHome {
     position: absolute;
     top: 327px;
+    left: 162px;
+    border-right: 4px solid var(--fff2);
+    box-sizing: border-box;
+    width: 0;
+    height: 65px;
+  }
+
+  .frameItemCourses {
+    position: absolute;
+    top: 427px;
+    left: 162px;
+    border-right: 4px solid var(--fff2);
+    box-sizing: border-box;
+    width: 0;
+    height: 65px;
+  }
+  /* este es el css que muestra la linea azul cuando una opcion esta activa en el sidebar */
+
+  .frameItemChat {
+    position: absolute;
+    top: 527px;
+    left: 162px;
+    border-right: 4px solid var(--fff2);
+    box-sizing: border-box;
+    width: 0;
+    height: 65px;
+  }
+  .frameItemSchedule {
+    position: absolute;
+    top: 627px;
+    left: 162px;
+    border-right: 4px solid var(--fff2);
+    box-sizing: border-box;
+    width: 0;
+    height: 65px;
+  }
+  .frameItemGrades {
+    position: absolute;
+    top: 727px;
     left: 162px;
     border-right: 4px solid var(--fff2);
     box-sizing: border-box;
@@ -998,4 +1037,5 @@
     color: var(--color-black);
     font-family: var(--font-inter);
   }
+ 
   
