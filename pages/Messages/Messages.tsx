@@ -1,15 +1,12 @@
-export default Messages
+
 import React from 'react';
 import classes from './Messages.module.css';
 import NewChat from './NewChat';
 import SearchBar from './SearchBar';
 import ChatBox from './ChatBox';
 import SendMessage from './SendMessage';
-<<<<<<< HEAD
 import { Layout } from '../../layout/Layout';
-=======
 import Contact from './Contact'; // Importamos el componente Contact
->>>>>>> 570691be (Added ContactsList)
 
 function Messages() {
   return (
