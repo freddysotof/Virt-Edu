@@ -5,7 +5,6 @@ import { Layout } from "../layout/Layout";
 
 function VirtEdu() {
   const [isLogged, setIsLogged] = useState(false);
-<<<<<<< HEAD
   return (
     <>
       {isLogged ? (
@@ -17,12 +16,6 @@ function VirtEdu() {
       )}
     </>
   ); // Layout es el sidebar + navbar
-=======
-  return (<Messages/>)  // isLogged ?  <Layout><Messages></Messages></Layout>: <Login setIsLogged={setIsLogged} />)
-  
-  
-// // Layout es el sidebar + navbar
->>>>>>> 570691be (Added ContactsList)
 }
 
 export default VirtEdu;
