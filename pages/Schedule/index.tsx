@@ -1,33 +1,34 @@
-import React from 'react'
-import { Layout } from '../../layout/Layout'
 import type { NextPage } from "next";
-import styles from "./Schedule.module.css";
+import styles from "./index.module.css";
 
-
-function Schedule() {
+const Schedule: NextPage = () => {
   return (
-        <Layout>
-  
+    <div className={styles.schedule}>
+      <img className={styles.scheduleChild} alt="" src="/Assets/svg/ellipse-2@2x.png" />
+      <div className={styles.luisaPerez}>Luisa Perez</div>
+      <div className={styles.student}>Student</div>
+      <div className={styles.notificacion1}>
+        <img className={styles.groupIcon} alt="" src="/Assets/svg/group.svg" />
+        <img
+          className={styles.notificacion1Child}
+          alt=""
+          src="/Assets/svg/ellipse-3.svg"
+        />
+        <div className={styles.div}>4</div>
+      </div>
       <div className={styles.schedule1}>Schedule</div>
       <div className={styles.task}>Task</div>
-      <div className={styles.scheduleInner} />
+      <div className={styles.scheduleItem} />
       <div className={styles.calendar}>
         <div className={styles.month}>
           <div className={styles.arrow}>
             <img className={styles.vectorIcon} alt="" src="/Assets/svg/vector.svg" />
-          </div>
-          <div className={styles.arrowc}>
-            <img className={styles.arrowc} alt="" src="/Assets/svg/Arrow.svg" />
-          </div>
-          <div className={styles.arrowl}>
-            <img className={styles.arrowl} alt="" src="/Assets/svg/Arrowl.svg" />
           </div>
           <b className={styles.february2021}>February 2021</b>
           <div className={styles.arrow1}>
             <img className={styles.vectorIcon} alt="" src="/Assets/svg/vector1.svg" />
           </div>
         </div>
-       
         <div className={styles.dates}>
           <div className={styles.row}>
             <div className={styles.mon}>MON</div>
@@ -87,11 +88,9 @@ function Schedule() {
           </div>
         </div>
       </div>
-      
-
       <div className={styles.addNewTask}>Add new task +</div>
-      <div className={styles.lineDiv} />
-      <div className={styles.rectangleGroup}>
+      <div className={styles.scheduleInner} />
+      <div className={styles.rectangleParent}>
         <div className={styles.groupChild} />
         <div className={styles.technology}>Technology</div>
         <div className={styles.may1216}>May 12-16</div>
@@ -101,7 +100,7 @@ function Schedule() {
           src="/Assets/svg/rightarrow-1.svg"
         />
       </div>
-      <div className={styles.rectangleContainer}>
+      <div className={styles.rectangleGroup}>
         <div className={styles.groupChild} />
         <div className={styles.technology}>Math</div>
         <div className={styles.may1216}>May 12-16</div>
@@ -111,7 +110,7 @@ function Schedule() {
           src="/Assets/svg/rightarrow-1.svg"
         />
       </div>
-      <div className={styles.groupDiv}>
+      <div className={styles.rectangleContainer}>
         <div className={styles.groupChild} />
         <div className={styles.technology}>Science</div>
         <div className={styles.may1216}>May 12-16</div>
@@ -121,7 +120,7 @@ function Schedule() {
           src="/Assets/svg/rightarrow-1.svg"
         />
       </div>
-      <div className={styles.rectangleParent1}>
+      <div className={styles.groupDiv}>
         <div className={styles.groupChild} />
         <div className={styles.technology}>P.E.</div>
         <div className={styles.may1216}>May 12-16</div>
@@ -131,7 +130,7 @@ function Schedule() {
           src="/Assets/svg/rightarrow-1.svg"
         />
       </div>
-      <div className={styles.rectangleParent2}>
+      <div className={styles.rectangleParent1}>
         <div className={styles.groupChild} />
         <div className={styles.technology}>History</div>
         <div className={styles.may1216}>May 12-16</div>
@@ -141,8 +140,7 @@ function Schedule() {
           src="/Assets/svg/rightarrow-1.svg"
         />
       </div>
-      
-      <div className={styles.rectangleParent3}>
+      <div className={styles.rectangleParent2}>
         <div className={styles.groupChild} />
         <div className={styles.technology}>Data S.</div>
         <div className={styles.may1216}>May 12-16</div>
@@ -151,9 +149,7 @@ function Schedule() {
           alt=""
           src="/Assets/svg/rightarrow-1.svg"
         />
-      </div> 
-
-      
+      </div>
       <div className={styles.december15}>December 15 - 21. 2023</div>
       <div className={styles.scheduleChild1} />
       <div className={styles.div36}>15</div>
@@ -190,17 +186,13 @@ function Schedule() {
       <div className={styles.scheduleChild4} />
       <div className={styles.scheduleChild5} />
       <div className={styles.scheduleChild6} />
-      <div className={styles.example}>Data S.</div>
-      <div className={styles.example1}>Tech</div>
-      <div className={styles.example2}>Math</div>
-      <div className={styles.example3}>Science</div>
-      <div className={styles.example4}>Science</div>
-      <div className={styles.rectangleO}></div>
-      <div className={styles.rectangleOr}></div>
-      <div className={styles.arrow}></div>
-    
-        </Layout>
+      <div className={styles.example}>Example</div>
+      <div className={styles.example1}>Example</div>
+      <div className={styles.example2}>Example</div>
+      <div className={styles.example3}>Example</div>
+      <div className={styles.example4}>Example</div>
+    </div>
   );
-}
+};
 
 export default Schedule;
