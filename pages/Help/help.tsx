@@ -44,33 +44,14 @@ export const Help: NextPage = () => {
             lacinia. Nam eget mi in purus lobortis eleifend. Sed nec ante dictum
             sem condimentum ullamcorper quis venenatis nisi. Proin vitae
             facilisis nisi, ac posuere leo.
+          
           </p>
-          </div>
-          {/* <div className={styles.arrowlefthelp}>
-        <img
-        className={styles.arrowlefthelp}
-        alt=""
-        src="public/Assets/svg/arrow-lefthelp.svg"
-      />
-       </div> */}
-      </div>
-      
-      <Link href="/Login/login">
-          {router.pathname === "/Login/login" ? (
-            <>
-            <div className={styles.arrowLeft1Icon} />
-            <button className={styles.arrowLeft1Icon}>
-              <img className={styles.arrowLeft1Icon} alt="" src="" />
-            </button>
-            </>
-          ) : (
-        <button className={styles.arrowLeft1Icon}>
-          <img className={styles.arrowLeft1Icon} alt="" src=""  />
-        </button>
-          )}
-        </Link>
+        </div>
 
+      </div>
+      <img className={styles.arrowlefthelp} alt="" src="/Assets/svg/arrowleft-1.svg" />
     </div>
+ 
 
   
   );
