@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
-import { useCallback } from "react";
-import styles from "./dashboard.module.css";
+import styles from "../pages/Dashboard/dashboard.module.css";
 import { SideBar } from "../components/SideBar";
 import { NavBar } from "../components/NavBar";
 

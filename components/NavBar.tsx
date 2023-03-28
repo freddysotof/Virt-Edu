@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./dashboard.module.css";
+import styles from "../pages/Dashboard/dashboard.module.css";
 import { useRouter } from "next/router";
 
 export const NavBar = () => {
