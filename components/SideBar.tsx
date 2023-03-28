@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import { Fragment, useCallback } from "react";
-import styles from "./dashboard.module.css";
+import { Fragment } from "react";
+import styles from "../pages/Dashboard/dashboard.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -9,6 +9,8 @@ export const SideBar: NextPage = () => {
   return (
     <Fragment>
       <div className={styles.rectangleParent}>
+        
+        {/* Linea/divisor naranja */}
         <div className={styles.frameChild} />
 
 
@@ -111,6 +113,16 @@ export const SideBar: NextPage = () => {
             </button>
           )}
         </Link>
+
+        {/* <Link href="/Profile/Profile">
+            {router.pathname === "/Profile/Profile" ? (
+              <>
+              
+              </>
+            ) : (
+
+            )}
+          </Link> */}
 
         <button className={styles.vParent}>
           <div className={styles.v}>V</div>
