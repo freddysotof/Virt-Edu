@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "../pages/Dashboard/dashboard.module.css";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export const NavBar = () => {
   const router = useRouter();
@@ -23,7 +24,9 @@ export const NavBar = () => {
   return (
     <div>
       <div className={styles.dashboard1}>{pageName}</div>
+      <Link href="/Profile/Profile">
       <img className={styles.dashboardChild} alt="" src="/Assets/images/ellipse-2@2x.png"/>
+      </Link>
       <div className={styles.luisaPerez}>Luisa Perez</div>
       <div className={styles.student}>Student</div>
       <button className={styles.notificacion1}>

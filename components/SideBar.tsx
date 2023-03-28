@@ -114,6 +114,16 @@ export const SideBar: NextPage = () => {
           )}
         </Link>
 
+        {/* <Link href="/Profile/Profile">
+            {router.pathname === "/Profile/Profile" ? (
+              <>
+              
+              </>
+            ) : (
+
+            )}
+          </Link> */}
+
         <button className={styles.vParent}>
           <div className={styles.v}>V</div>
           <div className={styles.e}>E</div>
