@@ -1,13 +1,14 @@
-import React from 'react'
+import React from "react";
 import Dashboard from "./dashboard";
 import { Layout } from "../../layout/Layout";
+
 
 function Home() {
   return (
     <Layout>
-        <Dashboard/>
+      <Dashboard />
     </Layout>
-  )
+  );
 }
 
-export default Home
+export default Home;
