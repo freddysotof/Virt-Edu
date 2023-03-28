@@ -2,13 +2,25 @@
 
 import React, { Fragment } from "react";
 import styles from "./dashboard.module.css";
-import CoursesBox from "../../components/CoursesBox";
-
+import { Box } from "@mui/material";
+import CoursesBox from "../../components/Containers/CoursesBox/CoursesBox";
+import Breadcrumb from "../../components/Breadcrumbs/Breadcrumb";
 
 function Dashboard(){
+  const coursesInfo = [
+    { courseTitle: "Quimica", courseId: "CBA356" },
+    { courseTitle: "Matematica", courseId: "CBA302" },
+    { courseTitle: "Redaccion", courseId: "LIT215" },
+    { courseTitle: "Musica", courseId: "MUS103" },
+    { courseTitle: "Historia", courseId: "HIS210" },
+    { courseTitle: "Tecnologia", courseId: "TEC315" },
+    { courseTitle: "Educacion Fisica", courseId: "EDF101" },
+    { courseTitle: "Seminario", courseId: "SEM201" },
+  ];
 
   return (
     <Fragment>
+      <Breadcrumb/>
       <div className={styles.upcomingTasks}>Upcoming Tasks</div>
       <div className={styles.today}>Today</div>
       <div className={styles.dashboardItem} />
@@ -155,16 +167,29 @@ function Dashboard(){
           />
         </button>
       </div>
-      <div className={styles.lineDiv} />
-      <div className={styles.dashboardChild1} />
-      <div className={styles.dashboardChild2} />
-      <div className={styles.dashboardChild3} />
+      
       <div className={styles.myCourses}>My Courses</div>
-      <div className={styles.dashboardChild4} />
-      <div className={styles.dashboardChild5} />
-      <div className={styles.dashboardChild6} />
 
-      <CoursesBox/>
+      <Box sx={{ pt: 35 }}>
+        <CoursesBox
+          courseTitle={coursesInfo[4].courseTitle}
+          courseId={coursesInfo[4].courseId}
+        ></CoursesBox>
+      </Box>
+
+      <Box sx={{ pt: 0, pl: 48 }}>
+        <CoursesBox
+          courseTitle={coursesInfo[5].courseTitle}
+          courseId={coursesInfo[5].courseId}
+        ></CoursesBox>
+      </Box>
+
+      <Box sx={{ pt: 0, pl: 96 }}>
+        <CoursesBox
+          courseTitle={coursesInfo[6].courseTitle}
+          courseId={coursesInfo[6].courseId}
+        ></CoursesBox>
+      </Box>
       
       {/* <div className={styles.courseCompleted}>Course completed</div>
       <div className={styles.div1}>33%</div>
