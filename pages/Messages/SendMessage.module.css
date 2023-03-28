@@ -4,7 +4,7 @@
   align-items: center;
   height: 80px;
   padding: 0 20px;
-  justify-content: space-between; /* Distribuir uniformemente los elementos en el espacio sobrante */
+  justify-content: space-between;
 }
 
 .sendMessage input {
@@ -40,3 +40,10 @@
   padding-right: 30px;
   color:rgb(255,168,0);
 }
+
+.sendButton:hover,
+.emojiButton:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out; 
+}
+
