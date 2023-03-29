@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Layout } from '../../layout/Layout'
 import type { NextPage } from "next";
 import styles from "./Schedule.module.css";
+import { useCheckAuth } from '../../hooks';
+import { useRouter } from 'next/router';
 
 
 function Schedule() {
+  const { status } = useCheckAuth();
+  const router = useRouter();
+  useEffect(() => {
+    if (status !== 'authenticated')
+      router.push('/Login/Login')
+  }, [status])
   return (
         <Layout>
   

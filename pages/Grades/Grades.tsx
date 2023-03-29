@@ -1,10 +1,18 @@
 
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useEffect } from "react";
+import { useCheckAuth } from "../../hooks";
 import { Layout } from "../../layout/Layout";
 
 import styles from "../Grades/Grades.module.css"
 
 function Grades() {
+  const { status } = useCheckAuth();
+  const router = useRouter();
+  useEffect(() => {
+    if (status !== 'authenticated')
+      router.push('/Login/Login')
+  }, [status])
   return (
     <Layout>
 
@@ -134,5 +142,8 @@ function Grades() {
     </Layout>
   );
 }
+
+
+
 
 export default Grades;

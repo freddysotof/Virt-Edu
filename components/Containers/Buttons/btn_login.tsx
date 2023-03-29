@@ -2,14 +2,17 @@ import React from "react";
 import { useRouter } from "next/router";
 
 import styles from "../../../pages/Login/login.module.css"
+import { useAuthStore } from "../../../hooks";
 
-function Btn_login({setIsLogged}) {
+function Btn_login() {
 
-    const router = useRouter();
-
+    const {
+      startLogin
+    } = useAuthStore()
     // const onRectangleButtonClick = useCallback(() => { router.push("/dashboard"); }, [router]);
-  const onClick = ()=>{
-    setIsLogged(true)
+  const onClick = async ()=>{
+    await startLogin();
+    // setIsLogged(true)
   }
   return (
     <>

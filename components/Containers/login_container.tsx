@@ -9,7 +9,7 @@ import { Fragment } from "react";
 import styles from "../../pages/Login/login.module.css";
 
 // const Login_Container: NextPage = ( {setisLogged} ) => {
-function Login_Container({setIsLogged}) {
+function Login_Container() {
   return (
     <Fragment>
       <Container maxWidth="md" className={styles.component1frame2}>
@@ -36,7 +36,7 @@ function Login_Container({setIsLogged}) {
         </a>
         </Link>
 
-        <Btn_login  setIsLogged={setIsLogged} />
+        <Btn_login  />
         <User />
         <Password />
       </Container>

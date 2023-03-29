@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import styles from "./help.module.css";
-import Login from "../../pages/Login/login";
+import Login from "../Login/Login";
 import { useRouter } from "next/router";
 import { Fragment, useCallback } from "react";
 import Link from "next/link";
