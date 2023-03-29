@@ -7,6 +7,18 @@ import { Router, useRouter } from "next/router";
 function VirtEdu() {
   const [isLogged, setIsLogged] = useState(false);
   
+  const{
+    status
+  } = useCheckAuth();
+
+  const router = useRouter();
+  useEffect(() => {
+    if(status==='authenticated')
+      router.push('/Dashboard/Home')
+    else
+      router.push('/Login/Login')
+  }, [])
+  
   
   return (
     <>

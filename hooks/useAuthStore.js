@@ -37,7 +37,7 @@ export const useAuthStore = () => {
             //         }
             //     });
             // });
-            const resp = await virtEduApi.post('/login');
+            const resp = await virtEduApi.post('/User/Login',credentials);
             if (resp) {
 
                 if (!resp.isSuccessStatusCode) {
