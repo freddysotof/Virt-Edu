@@ -16,7 +16,7 @@ function User({value,onChange}) {
             margin="none"
             required
             value={value}
-            name={'username'}
+            name={'email'}
             onChange={onChange}
           />
   )
