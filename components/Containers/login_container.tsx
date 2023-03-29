@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container } from "@mui/material";
 import User from "./Textfields/user";
 import Password from "./Textfields/password";
@@ -11,27 +11,36 @@ import { useAuthStore, useForm } from "../../hooks";
 
 // const Login_Container: NextPage = ( {setisLogged} ) => {
   const initialFormValues = {
-    username:'',
+    email:'',
     password:''
   }
 function Login_Container() {
 
 
   const {
-    startLogin
+    startLogin,
+    errorMessage,
+    startLogout
   } = useAuthStore()
   // const onRectangleButtonClick = useCallback(() => { router.push("/dashboard"); }, [router]);
 
   const {
     formState,
-    username,
+    email,
     password,
     onInputChange
   } = useForm(initialFormValues);
 
   const onClickLogin = async ()=>{
-    await startLogin({username,password});
+    await startLogin({email,password});
   }
+
+  useEffect(() => {
+    if(!!errorMessage)
+      alert(errorMessage);
+      
+  }, [errorMessage])
+  
   return (
     <Fragment>
       <Container maxWidth="md" className={styles.component1frame2}>
@@ -59,9 +68,12 @@ function Login_Container() {
         </Link>
 
         <Btn_login onClick={onClickLogin}  />
-        <User value={username} onChange={onInputChange}  />
+        <User value={email} onChange={onInputChange}  />
         <Password value={password} onChange={onInputChange} />
+     
       </Container>
+  
+    
     </Fragment>
   );
 }

@@ -38,17 +38,20 @@ export const useAuthStore = () => {
             //     });
             // });
             const resp = await virtEduApi.post('/User/Login',credentials);
+         
             if (resp) {
-
-                if (!resp.isSuccessStatusCode) {
-                    dispatch(onLogout({ errorMessage: resp.errorMessage }));
-                } else {
-                    localStorage.setItem('authUser', JSON.stringify(resp.data));
+                const {status,data} = resp;
+                console.log(status,data);
+                if (status===200 || status==204) {
+                    localStorage.setItem('token',resp.data)
+                    localStorage.setItem('authUser', JSON.stringify({email:credentials.email}));
                     dispatch(onLogin(resp.data))
+                } else {
+                    dispatch(onLogout({ errorMessage: resp.statusText }));
                 }
             }
         } catch (error) {
-            dispatch(onLogout({ errorMessage: 'Error de autenticacion' }));
+            dispatch(onLogout({ errorMessage: 'Usuario o contrasena inorrecta' }));
         }
 
 
