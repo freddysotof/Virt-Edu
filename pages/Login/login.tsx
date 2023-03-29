@@ -5,8 +5,9 @@ import styles from "./login.module.css";
 import Logo from "../../components/Logo/logo";
 import Btn_ayuda from "../../components/Containers/Buttons/btn_ayuda";
 import Login_Container from "../../components/Containers/login_container";
+import { NextPage } from "next";
 
-function LogIn ({setIsLogged}) {
+export const  Login: NextPage= ({}) =>{
     //const router = useRouter();
   
     //const onRectangleButtonClick = useCallback(() => { router.push("/dashboard"); }, [router]);
@@ -15,9 +16,9 @@ function LogIn ({setIsLogged}) {
       <div className={styles.registerlogIn}>
         <Logo/>
         <Btn_ayuda/>
-        <Login_Container  setIsLogged={setIsLogged} />
+        <Login_Container   />
       </div>
     );
   };
   
-  export default LogIn;
+  export default Login;

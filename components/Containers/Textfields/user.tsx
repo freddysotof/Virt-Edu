@@ -2,7 +2,7 @@ import React from 'react'
 import { TextField } from "@mui/material";
 import styles from "../../../pages/Login/login.module.css"
 
-function User() {
+function User({value,onChange}) {
   return (
     <TextField
             className={styles.rectangleTextfield}
@@ -15,6 +15,9 @@ function User() {
             size="medium"
             margin="none"
             required
+            value={value}
+            name={'username'}
+            onChange={onChange}
           />
   )
 }

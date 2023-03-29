@@ -7,9 +7,31 @@ import Link from "next/link";
 import { Fragment } from "react";
 
 import styles from "../../pages/Login/login.module.css";
+import { useAuthStore, useForm } from "../../hooks";
 
 // const Login_Container: NextPage = ( {setisLogged} ) => {
-function Login_Container({setIsLogged}) {
+  const initialFormValues = {
+    username:'',
+    password:''
+  }
+function Login_Container() {
+
+
+  const {
+    startLogin
+  } = useAuthStore()
+  // const onRectangleButtonClick = useCallback(() => { router.push("/dashboard"); }, [router]);
+
+  const {
+    formState,
+    username,
+    password,
+    onInputChange
+  } = useForm(initialFormValues);
+
+  const onClickLogin = async ()=>{
+    await startLogin({username,password});
+  }
   return (
     <Fragment>
       <Container maxWidth="md" className={styles.component1frame2}>
@@ -36,9 +58,9 @@ function Login_Container({setIsLogged}) {
         </a>
         </Link>
 
-        <Btn_login  setIsLogged={setIsLogged} />
-        <User />
-        <Password />
+        <Btn_login onClick={onClickLogin}  />
+        <User value={username} onChange={onInputChange}  />
+        <Password value={password} onChange={onInputChange} />
       </Container>
     </Fragment>
   );
