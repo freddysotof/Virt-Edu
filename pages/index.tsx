@@ -4,18 +4,10 @@ import { useState } from "react";
 import { Layout } from "../layout/Layout";
 import Grades from "./Grades/Grades";
 import SideBar_Schedule from "./Schedule/SideBar_Schedule";
+import CourseId from "./Course/CourseId";
 function VirtEdu() {
-  const [isLogged, setIsLogged] = useState(false);
   return (
-    <>
-      {isLogged ? (
-        <Layout>
-          <Dashboard />
-        </Layout>
-      ) : (
-        <Login setIsLogged={setIsLogged} />
-      )}
-    </>
+    <CourseId courseId="curso-001" />
   ); // Layout es el sidebar + navbar
 }
 
