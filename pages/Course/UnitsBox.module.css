@@ -1,0 +1,23 @@
+.unitsBox{
+  margin-left: 230px;
+}
+
+
+.title {
+  margin-left: 5px;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+}
+
+  .unitContent{
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  

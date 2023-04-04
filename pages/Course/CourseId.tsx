@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseInfo from './CourseInfo';
 import classes from './CourseId.module.css';
+import UnitsBox from './UnitsBox';
 
 const CourseId = ({ courseId }) => {
   const title = "Titulo del curso";
@@ -11,6 +12,7 @@ const CourseId = ({ courseId }) => {
   return (
     <div className={classes.courseId}>
       <CourseInfo title={title} description={description} imageUrl={imageUrl} />
+      <UnitsBox unitTitle={"Units"}/>
     </div>
   );
 };

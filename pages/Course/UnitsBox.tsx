@@ -5,10 +5,18 @@ import classes from './UnitsBox.module.css';
 const UnitsBox = ({ unitTitle }) => {
   return (
     <div className={classes.unitsBox}>
-      <h2>{unitTitle}</h2>
-      <CourseUnit UnitNumber={1} />
-      <CourseUnit UnitNumber={2} />
-      <CourseUnit UnitNumber={3} />
+      <div className={classes.title}>{unitTitle}</div>
+      <div className={classes.unitContent}>
+        <CourseUnit unitNumber={1} unitTitle="Introduction" unitTime={30} />
+        <CourseUnit unitNumber={2} unitTitle="Chapter 1" unitTime={30}/>
+        <CourseUnit unitNumber={3} unitTitle="Chapter 2" unitTime={30}/>
+        <CourseUnit unitNumber={4} unitTitle="Chapter 3" unitTime={30}/>
+        <CourseUnit unitNumber={5} unitTitle="Chapter 4" unitTime={30}/>
+        <CourseUnit unitNumber={6} unitTitle="Conclusion" unitTime={30}/>
+        <CourseUnit unitNumber={7} unitTitle="Conclusion" unitTime={30}/>
+        <CourseUnit unitNumber={8} unitTitle="Conclusion" unitTime={30}/>
+        <CourseUnit unitNumber={9} unitTitle="Conclusion" unitTime={30}/>
+      </div>
     </div>
   );
 };

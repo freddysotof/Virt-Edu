@@ -17,8 +17,8 @@
   }
   
   .courseTitle {
-    margin-right: 197px;
-    margin-bottom: 75px;
+    margin-right: 200px;
+    margin-bottom: 5px;
     font-weight: 600;
     font-size: 40px;
     font-family: 'Inter', sans-serif;
@@ -33,11 +33,11 @@
   
   .imageContainer {
     margin-top: 200px;
-    width: 1200px; /* Ajusta el ancho según tus necesidades */
-    height: 600px; /* Ajusta la altura según tus necesidades */
-    border-radius: 15px; /* Establece un radio de borde grande para los bordes redondeados */
-    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
-    margin-left: 150px; /* Ajusta el margen según tus necesidades */
+    width: 1200px; 
+    height: 600px; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    margin-left: 150px; 
   }
   
   .image {
