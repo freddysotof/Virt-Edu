@@ -2,13 +2,13 @@ import Login from "./Login/login";
 import Dashboard from "./Dashboard/dashboard";
 import { useState } from "react";
 import { Layout } from "../layout/Layout";
-import Grades from "./Grades/Grades";
-import SideBar_Schedule from "./Schedule/SideBar_Schedule";
-import CourseId from "./Course/CourseId";
+import CourseId from "./Course/CourseDetails/CourseId";
+import CourseDescription from "./Course/CourseDescription/CourseDescription";
+
 function VirtEdu() {
   return (
-    <CourseId courseId="curso-001" />
-  ); // Layout es el sidebar + navbar
+    <CourseDescription courseId="curso-001" />
+  );
 }
 
 export default VirtEdu;

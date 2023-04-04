@@ -12,9 +12,9 @@ const UnitsBox = ({ unitTitle }) => {
         <CourseUnit unitNumber={3} unitTitle="Chapter 2" unitTime={30}/>
         <CourseUnit unitNumber={4} unitTitle="Chapter 3" unitTime={30}/>
         <CourseUnit unitNumber={5} unitTitle="Chapter 4" unitTime={30}/>
-        <CourseUnit unitNumber={6} unitTitle="Conclusion" unitTime={30}/>
-        <CourseUnit unitNumber={7} unitTitle="Conclusion" unitTime={30}/>
-        <CourseUnit unitNumber={8} unitTitle="Conclusion" unitTime={30}/>
+        <CourseUnit unitNumber={6} unitTitle="Chapter 5" unitTime={30}/>
+        <CourseUnit unitNumber={7} unitTitle="Chapter 6" unitTime={30}/>
+        <CourseUnit unitNumber={8} unitTitle="Chapter 7" unitTime={30}/>
         <CourseUnit unitNumber={9} unitTitle="Conclusion" unitTime={30}/>
       </div>
     </div>
