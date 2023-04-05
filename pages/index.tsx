@@ -8,6 +8,7 @@ import CourseDescription from "./Course/CourseDescription/CourseDescription";
 function VirtEdu() {
   return (
     <CourseDescription courseId="curso-001" />
+    // <CourseId courseId={"001"}/>
   );
 }
 

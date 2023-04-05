@@ -1,0 +1,13 @@
+.assignmentDetails{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color:#B3B3B3;
+    margin-left: 10%;
+    
+}
