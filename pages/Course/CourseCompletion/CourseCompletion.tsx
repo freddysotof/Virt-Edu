@@ -12,12 +12,12 @@ function CourseCompletion({ courseId }) {
     { id: "83", title: "Fracciones bla bla bla bla bla bla bla bla bla blanpm", date: "3/2/2001", completed: false },
     { id: "82", title: "Fracciones bla bla bla bla bla bla bla bla bla blanpm", date: "3/2/2001", completed: false },
     { id: "12", title: "Fracciones bla bla bla bla bla bla bla bla bla blanpm", date: "3/2/2001", completed: false },
-    
+    { id: "12", title: "Fracciones bla bla bla bla bla bla bla bla bla blanpm", date: "3/2/2001", completed: false },  //el título debe tener un mínimo de caracteres para que no se descuadre con el resto de los elementos del componente
   ];
 
   const completedAssignments = assignments.reduce((acc, curr) => curr.completed ? acc + 1 : acc, 0);
   const totalAssignments = assignments.length;
-  const progress = (completedAssignments / totalAssignments) * 100;
+  const progress = ((completedAssignments / totalAssignments) * 100).toFixed(1);
 
   return (
     <div className={classes.courseCompletion}>
@@ -33,7 +33,10 @@ function CourseCompletion({ courseId }) {
         {assignments.map((assignment, index) => (
           <div key={assignment.id} className={classes.assignment}>
             <span className={classes.assignmentNumber}>{`${index + 1}`}</span>
-            <Assignment {...assignment} />
+            <Assignment
+              {...assignment}
+              title={assignment.title.length > 80 ? `${assignment.title.slice(0, 30)}...` : assignment.title} // Establecer un máximo de caracteres
+            />
           </div>
         ))}
       </div>
