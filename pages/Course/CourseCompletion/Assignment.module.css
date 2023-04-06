@@ -11,3 +11,18 @@
     margin-left: 10%;
     
 }
+
+.assignmentStatus{
+margin-top: 3%;
+margin-left: 3%;
+
+}
+
+.completed {
+    color: #B3B3B3;
+  }
+  
+  .notCompleted {
+    color: #21AFFF;
+  }
+  
