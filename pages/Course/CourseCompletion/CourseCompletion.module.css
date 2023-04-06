@@ -19,7 +19,25 @@
     width: 50%; /* ancho de acuerdo al progreso */
   }
   
+  .progressPercentage{
+    display:flex;
+    color: #B3B3B3;
+    margin-bottom: 1.5%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+  }
+
   .progressText{
     color: #B3B3B3;
     margin-bottom: 1.5%;
+    display: flex;
+    margin-left: 73%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
   }
+
+.progressHead{
+display: flex;
+flex-direction: row;
+
+}
