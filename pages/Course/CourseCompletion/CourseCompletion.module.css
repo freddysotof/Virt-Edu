@@ -46,3 +46,11 @@ flex-direction: row;
 display: flex;
 flex-direction: row;
 }
+
+.assignmentNumber{
+    margin-top: 8%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #21AFFF;
+}

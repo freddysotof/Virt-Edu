@@ -5,12 +5,16 @@ import Assignment from './Assignment';
 function CourseCompletion({ courseId }) {
   const assignments = [
     { id: "1", title: "suma bla bla bla bla bla bla bla bla bla bla", date: "1/2/2001", completed: true },
-    { id: "2", title: "resta", date: "2/2/2001", completed: true },
-    { id: "3", title: "multiplicacion", date: "3/2/2001", completed: false },
-    { id: "6", title: "Division ", date: "3/2/2001", completed: true },
+    { id: "2", title: "resta bla bla bla bla bla bla bla bla bla blanpm", date: "2/2/2001", completed: true },
+    { id: "3", title: "multiplicacion bla bla bla bla bla bla bla bla bla blanpm", date: "3/2/2001", completed: true },
+    { id: "6", title: "Division bla bla bla bla bla bla bla bla bla blanpm", date: "3/2/2001", completed: true },
+    { id: "20", title: "Fracciones bla bla bla bla bla bla bla bla bla blanpm", date: "3/2/2001", completed: false },
+    { id: "83", title: "Fracciones bla bla bla bla bla bla bla bla bla blanpm", date: "3/2/2001", completed: false },
+    { id: "82", title: "Fracciones bla bla bla bla bla bla bla bla bla blanpm", date: "3/2/2001", completed: false },
+    { id: "12", title: "Fracciones bla bla bla bla bla bla bla bla bla blanpm", date: "3/2/2001", completed: false },
+    
   ];
 
-  // Usamos reduce para contar la cantidad de asignaciones completadas
   const completedAssignments = assignments.reduce((acc, curr) => curr.completed ? acc + 1 : acc, 0);
   const totalAssignments = assignments.length;
   const progress = (completedAssignments / totalAssignments) * 100;
@@ -28,7 +32,7 @@ function CourseCompletion({ courseId }) {
       <div className={classes.assignmentsContainer}>
         {assignments.map((assignment, index) => (
           <div key={assignment.id} className={classes.assignment}>
-            <span>{`${index + 1}.`}</span>
+            <span className={classes.assignmentNumber}>{`${index + 1}`}</span>
             <Assignment {...assignment} />
           </div>
         ))}
