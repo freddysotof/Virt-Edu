@@ -16,7 +16,7 @@ function VirtEdu() {
     if(status==='authenticated')
       router.push('/Dashboard/Home')
     else
-      router.push('/Login/Login')
+      router.push('/Login/login')
   }, [])
   
   
