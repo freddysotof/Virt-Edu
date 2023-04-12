@@ -1,0 +1,20 @@
+.assignmentname {
+  /* 01 - {AssignmentName} */
+
+
+position: absolute;
+width: 343px;
+height: 38px;
+left: 216px;
+top: 264px;
+
+
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 38px;
+/* identical to box height */
+
+
+color: #000000;
+}

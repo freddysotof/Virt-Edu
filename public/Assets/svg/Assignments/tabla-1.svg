@@ -1,0 +1,72 @@
+<svg width="966" height="392" viewBox="0 0 966 392" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_701_91)">
+<mask id="mask0_701_91" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="966" height="56">
+<path d="M966 0H0V56H966V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_701_91)">
+<path d="M966 0H0V56H966V0Z" fill="#EBEBEB" fill-opacity="0.5"/>
+<path d="M0 0V-1H-1V0H0ZM483 0H484V-1H483V0ZM0 1H483V-1H0V1ZM482 0V56H484V0H482ZM1 56V0H-1V56H1Z" fill="#7A7A7A"/>
+</g>
+<path d="M965.5 0.5H0.5V55.5H965.5V0.5Z" stroke="#7A7A7A"/>
+<mask id="mask1_701_91" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="56" width="966" height="56">
+<path d="M966 56H0V112H966V56Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_701_91)">
+<path d="M483 112V113H484V112H483ZM0 112H-1V113H0V112ZM482 56V112H484V56H482ZM483 111H0V113H483V111ZM1 112V56H-1V112H1Z" fill="#7A7A7A"/>
+<path d="M966 112V113H967V112H966ZM965 56V112H967V56H965ZM966 111H483V113H966V111Z" fill="#7A7A7A"/>
+</g>
+<mask id="mask2_701_91" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="112" width="966" height="56">
+<path d="M966 112H0V168H966V112Z" fill="white"/>
+</mask>
+<g mask="url(#mask2_701_91)">
+<path d="M0 112H483V168H0V112Z" fill="#EBEBEB" fill-opacity="0.5"/>
+<mask id="mask3_701_91" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="112" width="483" height="56">
+<path d="M0 112H483V168H0V112Z" fill="#7A7A7A"/>
+</mask>
+<g mask="url(#mask3_701_91)">
+<path d="M483 168V169H484V168H483ZM0 168H-1V169H0V168ZM482 112V168H484V112H482ZM483 167H0V169H483V167ZM1 168V112H-1V168H1Z" fill="#7A7A7A"/>
+</g>
+<path d="M483 112H966V168H483V112Z" fill="#19BB81" fill-opacity="0.46"/>
+<mask id="mask4_701_91" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="483" y="112" width="483" height="56">
+<path d="M483 112H966V168H483V112Z" fill="#7A7A7A"/>
+</mask>
+<g mask="url(#mask4_701_91)">
+<path d="M966 168V169H967V168H966ZM965 112V168H967V112H965ZM966 167H483V169H966V167Z" fill="#7A7A7A"/>
+</g>
+</g>
+<mask id="mask5_701_91" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="168" width="966" height="56">
+<path d="M966 168H0V224H966V168Z" fill="white"/>
+</mask>
+<g mask="url(#mask5_701_91)">
+<path d="M483 224V225H484V224H483ZM0 224H-1V225H0V224ZM482 168V224H484V168H482ZM483 223H0V225H483V223ZM1 224V168H-1V224H1Z" fill="#7A7A7A"/>
+<path d="M966 224V225H967V224H966ZM965 168V224H967V168H965ZM966 223H483V225H966V223Z" fill="#7A7A7A"/>
+</g>
+<mask id="mask6_701_91" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="224" width="966" height="56">
+<path d="M966 224H0V280H966V224Z" fill="white"/>
+</mask>
+<g mask="url(#mask6_701_91)">
+<path d="M483 280V281H484V280H483ZM0 280H-1V281H0V280ZM482 224V280H484V224H482ZM483 279H0V281H483V279ZM1 280V224H-1V280H1Z" fill="#7A7A7A"/>
+<path d="M966 280V281H967V280H966ZM965 224V280H967V224H965ZM966 279H483V281H966V279Z" fill="#7A7A7A"/>
+</g>
+<mask id="mask7_701_91" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="280" width="966" height="56">
+<path d="M966 280H0V336H966V280Z" fill="white"/>
+</mask>
+<g mask="url(#mask7_701_91)">
+<path d="M966 280H0V336H966V280Z" fill="#EBEBEB" fill-opacity="0.5"/>
+<path d="M483 336V337H484V336H483ZM0 336H-1V337H0V336ZM482 280V336H484V280H482ZM483 335H0V337H483V335ZM1 336V280H-1V336H1Z" fill="#7A7A7A"/>
+<path d="M966 336V337H967V336H966ZM965 280V336H967V280H965ZM966 335H483V337H966V335Z" fill="#7A7A7A"/>
+</g>
+<mask id="mask8_701_91" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="336" width="966" height="56">
+<path d="M966 336H0V392H966V336Z" fill="white"/>
+</mask>
+<g mask="url(#mask8_701_91)">
+<path d="M483 392V393H484V392H483ZM0 392H-1V393H0V392ZM482 336V392H484V336H482ZM483 391H0V393H483V391ZM1 392V336H-1V392H1Z" fill="#7A7A7A"/>
+<path d="M966 392V393H967V392H966ZM965 336V392H967V336H965ZM966 391H483V393H966V391Z" fill="#7A7A7A"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_701_91">
+<rect width="966" height="392" fill="white"/>
+</clipPath>
+</defs>
+</svg>
