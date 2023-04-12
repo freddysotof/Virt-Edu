@@ -1,0 +1,251 @@
+.tabla1Icon {
+  position: absolute;
+  top: 675px;
+  left: 206px;
+  width: 966px;
+  height: 392px;
+  overflow: hidden;
+}
+.courses {
+  position: absolute;
+  top: 49px;
+  left: 216px;
+  font-size: 50px;
+  font-weight: 600;
+  font-family: var(--font-inter);
+}
+.frameChild {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+}
+.assignmentname,
+.groupParent {
+  position: absolute;
+  left: 216px;
+  font-size: 32px;
+}
+.groupParent {
+  top: 176px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 32px;
+  color: var(--afff);
+}
+.assignmentname {
+  top: 264px;
+  font-weight: 600;
+}
+.span {
+  color: #A5A5A5;
+}
+.startDate00000000Container {
+  position: relative;
+}
+.startDate00000000Parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.assignmentdescription {
+  position: relative;
+  font-weight: 600;
+  
+
+}
+.assignmentN{
+  width: 173px;
+  height: 38px;
+
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  color: #21AFFF;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.assignmentdescriptionWrapper,
+.frameParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameParent {
+  position: absolute;
+  top: 334px;
+  left: 206px;
+  flex-direction: column;
+  gap: 60px;
+}
+.editAssignment {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  font-family: var(--font-roboto);
+  color: var(--ffa800);
+  text-align: left;
+
+  padding: 10px;
+  gap: 10px;
+
+
+
+  /* #FFA800 */
+
+ 
+}
+.editAssignmentWrapper {
+  cursor: pointer;
+
+  padding: var(--padding-3xs);
+  background-color: transparent;
+  border: 1px solid #FFA800;
+  border-radius: 5px;
+  padding: 2px;
+  gap: 2px;
+
+
+}
+.deleteAssignmentWrapper,
+.editAssignmentWrapper,
+.frameGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.deleteAssignmentWrapper {
+  border-radius: var(--br-8xs);
+  border: 1px solid #FF3D00;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+/* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+
+  
+  color: #FF3D00;
+  
+  }
+  .frameGroup {
+    position: absolute;
+    top: 573px;
+    left: 206px;
+    gap: 25px;
+    color: var(--color-orangered);
+}
+.assignmentState {
+  position: absolute;
+  top: 635px;
+  left: 206px;
+  font-weight: 600;
+}
+.groupes,
+.numberOfAttempts,
+.teams1 {
+  position: absolute;
+  top: 695px;
+  left: 226px;
+  font-weight: 600;
+}
+.numberOfAttempts,
+.teams1 {
+  left: 709px;
+}
+.numberOfAttempts {
+  top: 751px;
+  left: 226px;
+}
+.attemptNumber1 {
+  position: absolute;
+  top: 751px;
+  left: 709px;
+}
+.assignmentState1,
+.send {
+  position: absolute;
+  top: 807px;
+}
+.assignmentState1 {
+  left: 226px;
+  font-weight: 600;
+}
+.send {
+  left: 709px;
+}
+.qualificationStatus {
+  position: absolute;
+  top: 863px;
+  left: 226px;
+  font-weight: 600;
+}
+.lastModified,
+.noQualificated {
+  position: absolute;
+  top: 863px;
+  left: 709px;
+}
+.lastModified {
+  top: 919px;
+  left: 226px;
+  font-weight: 600;
+}
+.div,
+.documentsSended {
+  position: absolute;
+  top: 919px;
+  left: 709px;
+}
+.documentsSended {
+  top: 975px;
+  left: 226px;
+  font-weight: 600;
+}
+.examplepdf {
+  position: absolute;
+  top: 975px;
+  left: 709px;
+  text-decoration: underline;
+}
+.comments,
+.comments0 {
+  position: absolute;
+  top: 1031px;
+}
+.comments {
+  left: 226px;
+  font-weight: 600;
+}
+.comments0 {
+  left: 709px;
+}
+.assignment {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 1117px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-black);
+  font-family: var(--font-roboto);
+}

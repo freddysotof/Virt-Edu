@@ -1,0 +1,32 @@
+.span {
+  color: var(--style);
+}
+.startDate00000000Container {
+  position: relative;
+}
+.startDate00000000Parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.assignmentdescription {
+  position: relative;
+  font-weight: 600;
+}
+.assignmentdescriptionWrapper,
+.frameParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameParent {
+  flex-direction: column;
+  gap: var(--gap-41xl);
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-black);
+  font-family: var(--font-roboto);
+}
