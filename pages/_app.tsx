@@ -6,7 +6,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 
 import "./global.css";
-
+import { Provider } from "react-redux";
+import {store} from '../store';
 
 
 function MyApp(props: any) {     // Function. React.FC = React.FunctionalComponent
@@ -24,6 +25,7 @@ function MyApp(props: any) {     // Function. React.FC = React.FunctionalCompone
 
   return (
     <React.Fragment>
+      <Provider store={store}>
       <Head>
         <title>VirtEdu</title>
         <meta
@@ -36,6 +38,7 @@ function MyApp(props: any) {     // Function. React.FC = React.FunctionalCompone
         <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>
+      </Provider>
     </React.Fragment>
     
   );

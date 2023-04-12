@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaCamera } from 'react-icons/fa';
 import classes from './Profile.module.css';
 import { FaEdit } from 'react-icons/fa';
 import { Layout } from '../../layout/Layout';
 import { ProfileLayout } from '../../layout/ProfileLayout';
+import { useCheckAuth } from '../../hooks';
+import { useRouter } from 'next/router';
 
 type ProfileProps = {
   profilePicture: string;
@@ -16,6 +18,14 @@ type ProfileProps = {
 }
 
 const Profile = (props: ProfileProps) => {
+
+  const { status } = useCheckAuth();
+  const router = useRouter();
+  useEffect(() => {
+    if (status !== 'authenticated')
+      router.push('/Login/Login')
+  }, [status])
+
   const {
     profilePicture,
     name,

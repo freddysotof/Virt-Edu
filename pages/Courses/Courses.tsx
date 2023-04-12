@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Layout } from "../../layout/Layout";
 import CoursesBox from "../../components/Containers/CoursesBox/CoursesBox";
 
 import styles from "../../components/Containers/CoursesBox/CoursesBox.module.css";
 import { Box } from "@mui/material";
+import { useCheckAuth } from "../../hooks";
+import { useRouter } from "next/router";
 
 function Courses() {
+  const { status } = useCheckAuth();
+  const router = useRouter();
+  useEffect(() => {
+    if (status !== 'authenticated')
+      router.push('/Login/Login')
+  }, [status])
   const coursesInfo = [
     { courseTitle: "Quimica", courseId: "CBA356" },
     { courseTitle: "Matematica", courseId: "CBA302" },

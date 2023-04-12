@@ -3,9 +3,18 @@ import { Fragment } from "react";
 import styles from "../pages/Dashboard/dashboard.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useAuthStore } from "../hooks";
 
 export const SideBar: NextPage = () => {
   const router = useRouter();
+
+  const {
+    startLogout
+  } = useAuthStore();
+
+  const onClickLogout = async ()=>{
+    await startLogout();
+  }
   return (
     <Fragment>
       <div className={styles.rectangleParent}>
@@ -166,7 +175,7 @@ export const SideBar: NextPage = () => {
           <div className={styles.e}>E</div>
         </button>
 
-        <button className={styles.logout1}>
+        <button className={styles.logout1} onClick={onClickLogout}>
           <img className={styles.vectorIcon14} alt="" src="/Assets/svg/vector14.svg"/>
           <img className={styles.vectorIcon15} alt="" src="/Assets/svg/vector15.svg"/>
           <img className={styles.vectorIcon16} alt="" src="/Assets/svg/vector16.svg"/>
