@@ -86,8 +86,45 @@ export const SideBar: NextPage = () => {
             )}
         </Link>
 
-        <Link href="/Grades/Grades">
+        <Link href="/Grades/Grades" >
           {router.pathname === "/Grades/Grades" ? (
+            <>
+              <div className={styles.frameItemGrades} />
+              <button className={styles.examen1}>
+                <img className={styles.groupIcon3} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group3.svg"/>
+                <img className={styles.groupIcon4} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group4.svg"/>
+                <img className={styles.groupIcon5} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group5.svg"/>
+                <img className={styles.groupIcon6} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group6.svg"/>
+                <img className={styles.groupIcon7} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group7.svg"/>
+                <img className={styles.groupIcon8} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group8.svg"/>
+                <img className={styles.groupIcon9} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group9.svg"/>
+                <img className={styles.groupIcon10} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group10.svg"/>
+                <img className={styles.groupIcon11} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group11.svg"/>
+                <img className={styles.groupIcon12} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group12.svg"/>
+                <img className={styles.groupIcon13} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group13.svg"/>
+                <img className={styles.groupIcon14} alt="" src="/Assets/svg/Highlighted_Grades_Icon/group14.svg"/>
+              </button>
+            </>
+          ) : (
+            <button className={styles.examen1}>
+              <img className={styles.groupIcon3} alt="" src="/Assets/svg/group3.svg"/>
+              <img className={styles.groupIcon4} alt="" src="/Assets/svg/group4.svg"/>
+              <img className={styles.groupIcon5} alt="" src="/Assets/svg/group5.svg"/>
+              <img className={styles.groupIcon6} alt="" src="/Assets/svg/group6.svg"/>
+              <img className={styles.groupIcon7} alt="" src="/Assets/svg/group7.svg"/>
+              <img className={styles.groupIcon8} alt="" src="/Assets/svg/group8.svg"/>
+              <img className={styles.groupIcon9} alt="" src="/Assets/svg/group9.svg"/>
+              <img className={styles.groupIcon10} alt="" src="/Assets/svg/group10.svg"/>
+              <img className={styles.groupIcon11} alt="" src="/Assets/svg/group11.svg"/>
+              <img className={styles.groupIcon12} alt="" src="/Assets/svg/group12.svg"/>
+              <img className={styles.groupIcon13} alt="" src="/Assets/svg/group13.svg"/>
+              <img className={styles.groupIcon14} alt="" src="/Assets/svg/group14.svg"/>
+            </button>
+          )}
+        </Link>
+
+        <Link href="/Grade_Details/Grade_Details" >
+          {router.pathname === "/Grade_Details/Grade_Details" ? (
             <>
               <div className={styles.frameItemGrades} />
               <button className={styles.examen1}>

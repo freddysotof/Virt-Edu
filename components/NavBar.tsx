@@ -18,6 +18,8 @@ export const NavBar = () => {
       setpageName('Schedule')
     else if(router.pathname==='/Grades/Grades')
       setpageName('Grades')
+      else if(router.pathname==='/Grade_Details/Grade_Details')
+      setpageName('Grades')
   
   }, [router.pathname]);
 
