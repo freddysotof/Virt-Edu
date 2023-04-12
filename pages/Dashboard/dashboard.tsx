@@ -1,33 +1,26 @@
 // our-domain.com/Dashboard/dashboard
 
 import React, { Fragment } from "react";
-import type { NextPage } from "next";
-import { useCallback } from "react";
 import styles from "./dashboard.module.css";
-import CoursesBox from "../../components/CoursesBox";
-import Link from "next/link";
+import { Box } from "@mui/material";
+import CoursesBox from "../../components/Containers/CoursesBox/CoursesBox";
+import Breadcrumb from "../../components/Breadcrumbs/Breadcrumb";
 
-
-const Dashboard: NextPage = () => {
-  const onCursoOnline1Click = useCallback(() => {
-    // Please sync "Courses" to the project
-  }, []);
-
-  const onBurbujaDeDialogo1Click = useCallback(() => {
-    // Please sync "Messages" to the project
-  }, []);
-
-  const onCalendario11Click = useCallback(() => {
-    // Please sync "Schedule" to the project
-  }, []);
-
-  const onExamen1Click = useCallback(() => {
-    // Please sync "Grades" to the project
-  }, []);
+function Dashboard(){
+  const coursesInfo = [
+    { courseTitle: "Quimica", courseId: "CBA356" },
+    { courseTitle: "Matematica", courseId: "CBA302" },
+    { courseTitle: "Redaccion", courseId: "LIT215" },
+    { courseTitle: "Musica", courseId: "MUS103" },
+    { courseTitle: "Historia", courseId: "HIS210" },
+    { courseTitle: "Tecnologia", courseId: "TEC315" },
+    { courseTitle: "Educacion Fisica", courseId: "EDF101" },
+    { courseTitle: "Seminario", courseId: "SEM201" },
+  ];
 
   return (
     <Fragment>
-    <>
+      <Breadcrumb/>
       <div className={styles.upcomingTasks}>Upcoming Tasks</div>
       <div className={styles.today}>Today</div>
       <div className={styles.dashboardItem} />
@@ -36,26 +29,24 @@ const Dashboard: NextPage = () => {
         <div className={styles.groupChild} />
         <div className={styles.technology}>Technology</div>
         <div className={styles.may1216}>May 12-16</div>
+
         <button className={styles.rightArrow1}>
-          <img
-            className={styles.groupIcon16}
-            alt=""
-            src="/Assets/svg/group16.svg"
-          />
+          <img className={styles.groupIcon16} alt="" src="/Assets/svg/group16.svg"/>
         </button>
+
       </button>
+
       <div className={styles.rectangleContainer}>
         <div className={styles.groupItem} />
         <div className={styles.math}>Technology</div>
         <div className={styles.am}>10 AM</div>
+
         <button className={styles.rightArrow1}>
-          <img
-            className={styles.groupIcon16}
-            alt=""
-            src="/Assets/svg/group17.svg"
-          />
+          <img className={styles.groupIcon16} alt="" src="/Assets/svg/group17.svg"/>
         </button>
+
       </div>
+
       <div className={styles.groupDiv}>
         <div className={styles.groupChild} />
         <div className={styles.math}>Math</div>
@@ -176,16 +167,29 @@ const Dashboard: NextPage = () => {
           />
         </button>
       </div>
-      <div className={styles.lineDiv} />
-      <div className={styles.dashboardChild1} />
-      <div className={styles.dashboardChild2} />
-      <div className={styles.dashboardChild3} />
+      
       <div className={styles.myCourses}>My Courses</div>
-      <div className={styles.dashboardChild4} />
-      <div className={styles.dashboardChild5} />
-      <div className={styles.dashboardChild6} />
 
-      <CoursesBox/>
+      <Box sx={{ pt: 35 }}>
+        <CoursesBox
+          courseTitle={coursesInfo[4].courseTitle}
+          courseId={coursesInfo[4].courseId}
+        ></CoursesBox>
+      </Box>
+
+      <Box sx={{ pt: 0, pl: 48 }}>
+        <CoursesBox
+          courseTitle={coursesInfo[5].courseTitle}
+          courseId={coursesInfo[5].courseId}
+        ></CoursesBox>
+      </Box>
+
+      <Box sx={{ pt: 0, pl: 96 }}>
+        <CoursesBox
+          courseTitle={coursesInfo[6].courseTitle}
+          courseId={coursesInfo[6].courseId}
+        ></CoursesBox>
+      </Box>
       
       {/* <div className={styles.courseCompleted}>Course completed</div>
       <div className={styles.div1}>33%</div>
@@ -238,7 +242,6 @@ const Dashboard: NextPage = () => {
         alt=""
         src="/Assets/svg/ellipse-15.svg"
       /> */}
-    </>
     </Fragment>
   );
 };

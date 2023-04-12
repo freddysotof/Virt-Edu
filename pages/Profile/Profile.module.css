@@ -1,0 +1,242 @@
+.profileContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+  }
+  
+  .profileBox {
+    width: 1100px;
+    height: 950px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #22AFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profilePicture {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    z-index: 0; /* establecer la imagen detrás del botón */
+  }
+  
+  .profilePicture::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #4FC9C1;
+  }
+  
+  .profilePicture::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #fff;
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 50%;
+    background: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-camera-512.png") no-repeat center center;
+  }
+  
+  
+  .name {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30.8649px;
+    line-height: 31px;
+    color: #000000;
+  }
+  
+  .email {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24.6486px;
+    line-height: 23px;
+    color: #21AFFF;
+    margin-top: -10px;
+    margin-bottom: 40px;
+  }
+  
+  .description {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18.6486px;
+    line-height: 33px;
+    letter-spacing: 0.474118px;
+    color: #2A9FB9;
+  }
+  
+  .title {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18.6486px;
+    line-height: 33px;
+    letter-spacing: 0.474118px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  .editBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 160px);
+    height: 70px;
+    background-color: #21AFFF;
+    border-radius: 10px 10px 0px 0px;
+    padding: 0 20px;
+    margin: 0 20px;
+  }
+  
+  .editBox h2 {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24.6486px;
+    line-height: 33px;
+    letter-spacing: 0.474118px;
+    color: #ffffff;
+    margin: 0;
+  }
+  
+  .AddPicture {
+    margin-top: -80px;
+    margin-left: 180px;
+    margin-bottom: 40px;
+    top: 35px;
+    left: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #4FC9C1;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  
+  /* Estilo para los títulos */
+  .title {
+    font-family: Quicksand, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #2A9FB9;
+  }
+  
+  /* Estilo para los campos */
+  .field {
+    font-family: Quicksand, sans-serif;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  
+  
+  @font-face {
+    font-family: 'Quicksand';
+    src: url('../../Fonts/Quicksand/Quicksand-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .profileInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 1rem;
+    font-size: 1.8rem;
+    
+  }
+  
+  .profileInfo h3 {
+    font-size: 1.8rem;
+  }
+  
+  .profileInfo p {
+    font-size: 1.2rem;
+  }
+  
+  .bio {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    margin-right: 200px;
+  }
+  
+  .address {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+    margin-left: 200px;
+  }
+  
+  .enrollment {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+  }
+  
+  .phone {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+    margin-left: 200px;
+  }
+  
+  .editButton {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24.6486px;;
+    line-height: 33px;
+    letter-spacing: 0.474118px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .editButton:hover {
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .AddPicture:hover{
+    transform: scale(1.1  );
+  }
+  
+  .email:hover {
+    text-decoration: underline;
+  }
+  
+  .AddPictureIcon{
+  color:white;
+  font-size: 23px;
+  
+  }
+  
+  .faEdit{
+  margin-Right: 5px;
+  
+  }
