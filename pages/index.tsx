@@ -2,30 +2,30 @@ import Login from "./Login/Login";
 import Dashboard from "./Dashboard/dashboard";
 import { useEffect, useState } from "react";
 import { Layout } from "../layout/Layout";
-import {useCheckAuth} from '../hooks'
+import { useCheckAuth } from '../hooks'
 import { Router, useRouter } from "next/router";
 function VirtEdu() {
   const [isLogged, setIsLogged] = useState(false);
-  
-  const{
+
+  const {
     status
   } = useCheckAuth();
 
   const router = useRouter();
   useEffect(() => {
-    if(status==='authenticated')
+    if (status === 'authenticated')
       router.push('/Dashboard/Home')
     else
       router.push('/Login/Login')
   }, [])
-  
-  
+
+
   return (
     <>
-   {/* {
+      {/* {
         
    } */}
-        {/* <Layout>
+      {/* <Layout>
           <Dashboard />
         </Layout>
       ) : (

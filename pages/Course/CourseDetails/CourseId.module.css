@@ -1,0 +1,16 @@
+.classes.courseId {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-top: 20px;
+    /* otros estilos */
+  }
+  
+  .classes.courseInfo {
+    /* estilos para el subcomponente CourseInfo */
+    /* por ejemplo: */
+    font-size: 14px;
+    color: #555;
+  }
+  
