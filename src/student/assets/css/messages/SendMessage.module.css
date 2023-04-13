@@ -1,0 +1,49 @@
+.sendMessage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.sendMessage input {
+  flex-grow: 1;
+  flex-shrink: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.sendButton {
+  flex-basis: 0;
+  flex-grow: 0;
+  height: 100%;
+  background-color: transparent;
+  margin-left: auto;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  font-size: 25px;
+  color:rgb(34,175,255);
+}
+
+.emojiButton {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding-right: 30px;
+  color:rgb(255,168,0);
+}
+
+.sendButton:hover,
+.emojiButton:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out; 
+}
+

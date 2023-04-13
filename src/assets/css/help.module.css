@@ -1,0 +1,61 @@
+.clientsRequestsV11Icon {
+  position: absolute;
+  top: 243px;
+  left: 826px;
+  border-radius: 10px;
+  width: 801px;
+  height: 632px;
+  overflow: hidden;
+}
+.helpCenter {
+  position: relative;
+  font-weight: 600;
+}
+.boremIpsumDolor {
+  margin: 0;
+}
+.boremIpsumDolorContainer {
+  position: relative;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  display: inline-block;
+  width: 658px;
+}
+.helpCenterParent {
+  position: absolute;
+  top: 255px;
+  left: 111px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 50px;
+}
+.arrowLeft1Icon {
+  position: absolute;
+  top: 62px;
+  left: 111px;
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+}
+.arrowlefthelp {
+  position: absolute;
+  top: 62px;
+  left: 111px;
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+}
+.help {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 1117px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 64px;
+  color: #21afff;
+  font-family: var(--font-inter);
+}

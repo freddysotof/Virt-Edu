@@ -1,0 +1,35 @@
+.searchBar {
+  height: 60px;
+  width: 400px;
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 150px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  display: flex;
+}
+  
+  .searchBar input[type="text"] {
+    background-color: #f0f0f0;
+    color: #a5a5a5;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 30px;
+  }
+  
+  
+  .searchBar .searchIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    background-color: #a5a5a5;
+    background-image: url('https://w1.pngwing.com/pngs/216/883/png-transparent-magnifying-glass-icon-zooming-user-interface-icon-design-button-black-and-white-line-circle.png'); /* Ruta a la imagen de la lupa */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1000px 1000px;
+  }

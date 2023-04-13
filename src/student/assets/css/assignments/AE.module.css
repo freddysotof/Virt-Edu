@@ -1,0 +1,153 @@
+.courses {
+  position: absolute;
+  top: 49px;
+  left: 216px;
+  font-size: 50px;
+  font-weight: 600;
+  font-family: var(--font-inter);
+}
+.assignmentEditInner {
+  position: absolute;
+  top: 334px;
+  left: 206px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.addAssignment {
+  position: relative;
+  font-weight: 600;
+}
+.addAssignmentWrapper {
+  position: absolute;
+  top: 521px;
+  left: 206px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameChild {
+  position: relative;
+  width: 84px;
+  height: 50px;
+  flex-shrink: 0;
+}
+.groupChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-9xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  width: 84px;
+  height: 50px;
+}
+.downloadIcon {
+  position: absolute;
+  top: 15px;
+  left: 32px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+.groupParent {
+  position: absolute;
+  top: 591px;
+  left: 206px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.assignmentEditChild {
+  position: absolute;
+  top: 591px;
+  left: 887px;
+  width: 84px;
+  height: 50px;
+}
+.assignmentEditItem,
+.rectangleContainer,
+.rectangleDiv {
+  position: absolute;
+  top: 591px;
+  left: 981px;
+  width: 84px;
+  height: 50px;
+}
+.rectangleContainer,
+.rectangleDiv {
+  left: 1075px;
+}
+.rectangleDiv {
+  top: 669px;
+  left: 206px;
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  width: 953px;
+  height: 214px;
+}
+.cancelWrapper,
+.saveChangesWrapper {
+  position: absolute;
+  top: 915px;
+  left: 206px;
+  border-radius: var(--br-8xs);
+  background-color: var(--ffa800);
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-3xs);
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: var(--color-white);
+}
+.cancelWrapper {
+  left: 334px;
+  background-color: var(--style);
+}
+.assignmentEdit {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 1117px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-black);
+  font-family: var(--font-roboto);
+}
+.frameC {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+}
+.math212 {
+  position: relative;
+  font-weight: 600;
+}
+.groupP {
+  position: absolute;
+  top: 176px;
+  left: 216px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 32px;
+}
+.assignmentE {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 1117px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--afff);
+  font-family: var(--font-roboto);
+}
