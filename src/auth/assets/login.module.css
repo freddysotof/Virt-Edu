@@ -43,7 +43,7 @@
     left: 0;
     border-radius: 10px;
     background-color: var(--color-white);
-    width: 734px;
+    width: 764px;
     height: 355px;
   }
   .logIn {
@@ -105,7 +105,7 @@
     left: 31px;
   }
   .component1frame2Child1 {
-    top: 203px;
+    top: 103px;
   }
 
   .forgotPassword {
