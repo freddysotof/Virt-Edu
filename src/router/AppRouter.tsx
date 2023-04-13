@@ -6,8 +6,7 @@ import React from 'react'
 import { Help } from '../pages/Help';
 export const AppRouter = () => {
   const { status } = useCheckAuth();
-
-
+ 
 
   // if (status === 'checking')
   //   return <CheckingAuth />;
@@ -23,7 +22,7 @@ export const AppRouter = () => {
         }
 
         <Route path='/help' element={<Help />} />
-        {/* <Route path='/*' element={<Navigate to='/auth/login' />} /> */}
+        <Route path='/*' element={<Navigate to='/auth/login' />} />
       </Routes>
     </React.Fragment>
 
