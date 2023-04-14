@@ -46,14 +46,13 @@ function ForgotPassword() {
           sx={{ width: 672 }}
           color="primary"
           variant="filled"
-          defaultValue="ID"
           type="text"
-          label="Label"
+          label="ID"
           size="medium"
           margin="none"
           required
         />
-        <TextField
+        {/* <TextField
           className={styles.component1frame2Child1}
           sx={{ width: 672 }}
           color="primary"
@@ -63,7 +62,7 @@ function ForgotPassword() {
           size="medium"
           margin="none"
           required
-        />
+        /> */}
         {/* <button
           className={styles.forgotPassword}
           onClick={onForgotPasswordClick}
