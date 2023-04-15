@@ -40,12 +40,13 @@ export const useAuthStore = () => {
             const resp = await virtEduApi.post('/User/Login',credentials);
          
             if (resp) {
+                console.log(resp);
                 const {status,data} = resp;
                 
                 if (status===200 || status==204) {
-                    localStorage.setItem('token',resp.data)
-                    localStorage.setItem('authUser', JSON.stringify({email:credentials.email}));
-                    dispatch(onLogin(resp.data))
+                    localStorage.setItem('token',data)
+                    localStorage.setItem('authUser', JSON.stringify(data));
+                    dispatch(onLogin(data))
                 } else {
                     dispatch(onLogout({ errorMessage: resp.statusText }));
                 }

@@ -33,7 +33,8 @@ export const StudentRoutes = () => {
                 <Route path='/Grades/:id/Details' element={<GradeDetailPage />}></Route>
                 <Route path='/Assignments' element={<AssignmentPage />}></Route>
                 <Route path='/Assignments/Edit' element={<AssignmentEditPage />}></Route>
-              
+                <Route path='/*' element={<Navigate to="/" />}></Route>
+
             </Routes>
         </StudentLayout>
         </>

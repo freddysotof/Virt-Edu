@@ -1,17 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
-
+const initialAuthState= {
+    status: 'not-authenticated', // 'checking', 'not-authenticated' , 'authenticated'
+    id: null,
+    email: null,
+    displayName: null,
+    username: null,
+    roleId:2,
+    // employeeCode: null,
+    // authenticationType: 2,
+    errorMessage: null,
+}
 export const authSlice = createSlice({
     name: 'auth',
-    initialState: {
-        status: 'not-authenticated', // 'checking', 'not-authenticated' , 'authenticated'
-        id: null,
-        email: null,
-        displayName: null,
-        username: null,
-        // employeeCode: null,
-        // authenticationType: 2,
-        errorMessage: null,
-    },
+    initialState: initialAuthState,
     reducers: {
         onLogin: (state, { payload }) => {
             state.status = 'authenticated'; // 'checking', 'not-authenticated' , 'authenticated'
@@ -19,6 +20,7 @@ export const authSlice = createSlice({
             state.email = payload.email;
             state.displayName = payload.displayName;
             state.username = payload.username;
+            state.roleId = payload.roleId??initialAuthState.roleId;
             // state.authenticationType = payload.authenticationType;
             // state.employeeCode = payload.employeeCode;
             state.errorMessage = null;
