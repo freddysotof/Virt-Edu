@@ -17,6 +17,7 @@ export const useAuthStore = () => {
             authenticationType,
             id,
             email,
+            roleId,
         } = authState
     const dispatch = useDispatch();
 
@@ -44,9 +45,9 @@ export const useAuthStore = () => {
                 const {status,data} = resp;
                 
                 if (status===200 || status==204) {
-                    localStorage.setItem('token',data)
-                    localStorage.setItem('authUser', JSON.stringify(data));
-                    dispatch(onLogin(data))
+                    localStorage.setItem('token',data.token)
+                    localStorage.setItem('authUser', JSON.stringify(data.user));
+                    dispatch(onLogin(data.user))
                 } else {
                     dispatch(onLogout({ errorMessage: resp.statusText }));
                 }
@@ -82,6 +83,7 @@ export const useAuthStore = () => {
         authenticationType,
         id,
         email,
+        roleName:roleId===2 ?'Estudiante':'Maestro',
         //* Metodos
         startLogin,
         startLogout,

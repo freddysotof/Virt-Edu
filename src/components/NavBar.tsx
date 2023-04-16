@@ -35,7 +35,7 @@ export const NavBar = () => {
       <NavLink to={"/Profile"}>
       <img className={styles.dashboardChild} alt="" src="/Assets/images/ellipse-2@2x.png"/>
       </NavLink>
-      <div className={styles.luisaPerez}>Luisa Perez</div>
+      <div className={styles.luisaPerez}>{displayName}</div>
       <div className={styles.student}>Student</div>
       <button className={styles.notificacion1}>
         <img className={styles.groupIcon15} alt="" src="/Assets/svg/group15.svg"/>
