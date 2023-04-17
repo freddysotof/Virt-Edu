@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as ReactBootStrap from "react-bootstrap";
 import { Box } from "@mui/material";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useCourseStore } from "../../hooks/useCourseStore";
+import { useGradeStore } from "../../hooks/useGradeStore";
 
 const GradeDetailPage = () => {
+  const { id, ...rest } = useParams();
+  const navigate=useNavigate();
+
+  const {
+    startLoadingGradeById,
+    activeGrade
+  } = useGradeStore();
+
+  useEffect(() => {
+    startLoadingGradeById(id)
+  }, [id])
+  
+
+  const onNavigateBack = ()=>{
+    navigate(-1);
+  }
+
+  if (!activeGrade)
+    return <Navigate to="/Grades" />
+
+
   const grades_arr = [
     {
       assignment: "Practica 1",

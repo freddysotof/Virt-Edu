@@ -31,7 +31,7 @@ function GradePage() {
           </div>
         </div>
         {grades.map((grade, index) => (
-          <div className={styles.frameContainer} onClick={onViewDetail} style={{ cursor: 'pointer' }}>
+          <div className={styles.frameContainer} onClick={()=>onViewDetail(grade.id)} style={{ cursor: 'pointer' }}>
 
             <p className={styles.technologyWrapper}>
               <div className={styles.course}>{grade.course.name}</div>
