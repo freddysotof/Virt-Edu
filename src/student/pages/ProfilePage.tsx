@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { FaCamera } from 'react-icons/fa';
 import classes from '../assets/css/Profile.module.css';
 import { FaEdit } from 'react-icons/fa';
+import { useAuthStore } from '../../hooks';
 
 
 type ProfileProps = {
@@ -16,11 +17,18 @@ type ProfileProps = {
 
 const ProfilePage = (props: ProfileProps) => {
 
+  const {
+    photoUrl,
+    displayName,
+    email,
+    phone
+  } = useAuthStore();
+
 
   const {
     profilePicture,
     name,
-    email,
+    // email,
     description,
     address,
     number,
@@ -34,7 +42,7 @@ const ProfilePage = (props: ProfileProps) => {
       <div className={classes.profileBox}>
       <img
       className={classes.profilePicture}
-      src={profilePicture}
+      src={photoUrl}
       alt="Profile"
       style={{
         width: "250px",
@@ -45,7 +53,7 @@ const ProfilePage = (props: ProfileProps) => {
       <button className={classes.AddPicture}>
         <FaCamera className={classes.AddPictureIcon}/> {}
       </button>
-        <h2 className={classes.name}>{name}</h2>
+        <h2 className={classes.name}>{displayName}</h2>
         <p className={classes.email}>{email}</p>
         <div className={classes.editBox}>
           <h2>Basic Information</h2>
@@ -69,7 +77,7 @@ const ProfilePage = (props: ProfileProps) => {
           </div>
           <div className={classes.phone}>
             <h3 className={classes.title}>Phone</h3>
-            <p className={classes.field}>{number}</p>
+            <p className={classes.field}>{phone}</p>
           </div>
         </div>
       </div>

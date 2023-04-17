@@ -4,6 +4,7 @@ import Logo from "../components/Logo/logo";
 import Btn_ayuda from "../components/Buttons/btn_ayuda";
 import Login_Container from "../components/login_container";
 import { LoginLayout } from "../layout/LoginLayout";
+import { useLocation } from "react-router-dom";
 
 export const  LoginPage = ({}) =>{
 

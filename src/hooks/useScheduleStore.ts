@@ -23,6 +23,15 @@ export const useScheduleStore = () => {
         dispatch(onSetActiveEvent(event))
     }
 
+    // const startLoadingEventById = async (eventId) => {
+    //     try {
+    //         const { data } = await virtEduApi.get(`/Course/${eventId}`)
+    //         dispatch(onSetActiveGrade(data))
+    //     } catch (error) {
+
+    //     }
+    // }
+
     const startLoadingEventsByUser = async () => {
         try {
 

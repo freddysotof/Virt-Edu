@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { useEffect, useMemo } from 'react';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import { useCourseStore } from '../../hooks/useCourseStore';
 import classes from '../assets/css/courses/CourseDescription.module.css';
 import BasicTabs from '../components/courses/BasicTabs';
 import CourseCompletion from '../components/courses/CourseCompletion';
 
-function CourseDescriptionPage({ courseId }) {
+function CourseDescriptionPage() {
+  const { id, ...rest } = useParams();
+  const navigate=useNavigate();
+
+  const {
+    startLoadingCourseById,
+    activeCourse
+  } = useCourseStore();
+
+  useEffect(() => {
+    startLoadingCourseById(id)
+  }, [id])
+  
+
+  const onNavigateBack = ()=>{
+    navigate(-1);
+  }
+
+  if (!activeCourse)
+    return <Navigate to="/Courses" />
+
+
 const imageUrl = 'https://www.disruptiva.media/wp-content/uploads/2020/03/Educacio%CC%81n-virtual-02-1024x576.jpg';
   return (
     <>

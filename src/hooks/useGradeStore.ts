@@ -21,6 +21,15 @@ export const useGradeStore = () => {
         dispatch(onSetActiveGrade(grade))
     }
 
+    const startLoadingGradeById = async (gradeId) => {
+        try {
+            const { data } = await virtEduApi.get(`/Grade/${gradeId}`)
+            dispatch(onSetActiveGrade(data))
+        } catch (error) {
+
+        }
+    }
+
     const startLoadingGradesByStudentId = async () => {
         try {
             // Buscar notas por estudiantes
@@ -49,6 +58,7 @@ export const useGradeStore = () => {
         //* Metodos
         setActiveGrade,
         startLoadingGradesByStudentId,
+        startLoadingGradeById,
 
 
     }
