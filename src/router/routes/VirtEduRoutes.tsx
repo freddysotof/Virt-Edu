@@ -8,8 +8,7 @@ export const VirtEduRoutes = () => {
         <Routes>
              <Route path='/*' element={<StudentRoutes />}/>
             <Route path='/profile/*' element={<ProfileRoutes />}/>
-           
-
+            
         </Routes>
     )
 }

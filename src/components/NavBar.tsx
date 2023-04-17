@@ -6,15 +6,16 @@ import { useAuthStore } from "../hooks";
 export const NavBar = () => {
   
   const [pageName, setpageName] = useState("");
- 
 
   const location = useLocation();
-  
+
   const {
     displayName,
-    username,
-    email
-  }= useAuthStore()
+    roleName,
+    photoUrl
+  } = useAuthStore();
+  
+
   useEffect(() => {
     if (location.pathname === "/")
       setpageName('Dashboard')
@@ -33,10 +34,10 @@ export const NavBar = () => {
     <div>
       <div className={styles.dashboard1}>{pageName}</div>
       <NavLink to={"/Profile"}>
-      <img className={styles.dashboardChild} alt="" src="/Assets/images/ellipse-2@2x.png"/>
+      <img className={styles.dashboardChild} alt="" src={photoUrl}/>
       </NavLink>
-      <div className={styles.luisaPerez}>Luisa Perez</div>
-      <div className={styles.student}>Student</div>
+      <div className={styles.luisaPerez}>{displayName}</div>
+      <div className={styles.student}>{roleName}</div>
       <button className={styles.notificacion1}>
         <img className={styles.groupIcon15} alt="" src="/Assets/svg/group15.svg"/>
         <img className={styles.notificacion1Child} alt="" src="/Assets/svg/ellipse-3.svg"/>

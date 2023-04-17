@@ -1,11 +1,20 @@
 
 import React, { useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useCheckAuth } from "../../hooks";
+import { useGradeStore } from "../../hooks/useGradeStore";
 
 import styles from "../assets/css/Grades.module.css"
 
 function GradePage() {
 
+  const { grades } = useGradeStore();
+
+  const navigate = useNavigate();
+  const onViewDetail = (id) => {
+    navigate(`/Grades/${id}`);
+
+  }
   return (
     <>
 
@@ -21,7 +30,22 @@ function GradePage() {
             <label className={styles.course}>Final</label>
           </div>
         </div>
-        <div className={styles.frameContainer}>
+        {grades.map((grade, index) => (
+          <div className={styles.frameContainer} onClick={onViewDetail} style={{ cursor: 'pointer' }}>
+
+            <p className={styles.technologyWrapper}>
+              <div className={styles.course}>{grade.course.name}</div>
+            </p>
+            <p className={styles.technologyWrapper}>
+              <div className={styles.course}>{grade.score}</div>
+            </p>
+            <p className={styles.container}>
+              <div className={styles.course}>{grade.publishDate}</div>
+            </p>
+
+          </div>
+        ))}
+        {/* <div className={styles.frameContainer}>
           <p className={styles.technologyWrapper}>
             <div className={styles.course}>Technology</div>
           </p>
@@ -130,7 +154,7 @@ function GradePage() {
           <p className={styles.wrapper12}>
             <div className={styles.course}>50</div>
           </p>
-        </div>
+        </div> */}
       </div>
     </>
   );
