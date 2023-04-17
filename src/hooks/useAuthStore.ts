@@ -17,37 +17,30 @@ export const useAuthStore = () => {
             authenticationType,
             id,
             email,
-            roleId,
+            role,
+            photoUrl,
+            studentId
         } = authState
     const dispatch = useDispatch();
 
     const startLogin = async (credentials) => {
         try {
             dispatch(onCheckingCredentials())
-            // resp = await new Promise((resolve,reject) => {
-            //     return resolve
-            //     ( {
-            //         statusCode: 200,
-            //         isSuccessStatusCode: true,
-            //         data: {
-            //             id:1,
-            //             email:'', 
-            //             displayName:'', 
-            //             username :''
-    
-            //         }
-            //     });
-            // });
-            const resp = await virtEduApi.post('/User/Login',credentials);
-         
+            const resp = await virtEduApi.post('/User/Login', credentials);
+
             if (resp) {
-                console.log(resp);
-                const {status,data} = resp;
-                
-                if (status===200 || status==204) {
-                    localStorage.setItem('token',data.token)
-                    localStorage.setItem('authUser', JSON.stringify(data.user));
-                    dispatch(onLogin(data.user))
+                const { status, data } = resp;
+
+                if (status === 200 || status == 204) {
+                    // Obtener id estudiante si tiene rol estudiante
+                    if (data.user.role === 2) {
+                        const { data: userInfo } = await virtEduApi.get(`/User/${data.user.id}`);
+                    // dispatch(onLogin({ ...data.user }));
+                    localStorage.setItem('token', data.token)
+                    localStorage.setItem('authUser', JSON.stringify({ ...data.user, studentId: userInfo?.student?.id }));
+                   
+                    dispatch(onLogin({ ...data.user, studentId: userInfo?.student?.id }));
+                    }
                 } else {
                     dispatch(onLogout({ errorMessage: resp.statusText }));
                 }
@@ -83,7 +76,9 @@ export const useAuthStore = () => {
         authenticationType,
         id,
         email,
-        roleName:roleId===2 ?'Estudiante':'Maestro',
+        roleName: role === 2 ? 'Estudiante' : 'Maestro',
+        studentId,
+        photoUrl,
         //* Metodos
         startLogin,
         startLogout,

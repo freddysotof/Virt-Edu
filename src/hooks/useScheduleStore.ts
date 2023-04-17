@@ -8,14 +8,16 @@ export const useScheduleStore = () => {
         isLoading,
         errorMessage,
         messageSaved,
-    } = useSelector(state => state.event);
-    const dispatch = useDispatch();
-
+    } = useSelector(state => state.schedule);
+   
     const {
         id,
-        roleId,
+        role,
+        studentId
     } = useSelector(state => state.auth);
+
     const dispatch = useDispatch();
+
 
     const setActiveEvent = (event) => {
         dispatch(onSetActiveEvent(event))
@@ -25,9 +27,9 @@ export const useScheduleStore = () => {
         try {
 
             dispatch(onSetEventsLoading());
-            if (roleId === 2) {
+            if (role === 2) {
                 // Buscar notas por estudiantes
-                const { data } = await virtEduApi.get(`/Users/${id}/schedule`);
+                const { data } = await virtEduApi.get(`/Student/${studentId}/Events`);
                 dispatch(onLoadEvents(data));
             }
         } catch (error) {

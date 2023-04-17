@@ -9,7 +9,9 @@ import NewChat from '../components/messages/NewChat';
 import Contact from '../components/messages/Contact';
 import ChatBox from '../components/messages/ChatBox';
 import SendMessage from '../components/messages/SendMessage';
+import { getEnvVariables } from '../../helpers';
 
+const {VITE_SIGNALR_URL} = getEnvVariables();
 function MessagePage() {
 
   const [connection, setConnection] = useState(null);
@@ -20,7 +22,7 @@ function MessagePage() {
 
   useEffect(() => {
     const newConnection = new signalR.HubConnectionBuilder()
-      .withUrl('https://localhost:44393/chat', { accessTokenFactory: () => localStorage.getItem('token') })
+      .withUrl(VITE_SIGNALR_URL, { accessTokenFactory: () => localStorage.getItem('token') })
       .withAutomaticReconnect()
       .build();
 

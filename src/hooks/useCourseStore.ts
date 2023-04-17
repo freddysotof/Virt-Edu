@@ -13,7 +13,9 @@ export const useCourseStore = () => {
 
     const {
         id,
-        roleId,
+        role,
+        studentId,
+
     } = useSelector(state => state.auth);
     const dispatch = useDispatch();
 
@@ -23,11 +25,11 @@ export const useCourseStore = () => {
 
     const startLoadingCoursesByUser = async () => {
         try {
-
-            dispatch(onSetCoursesLoading());
+           dispatch(onSetCoursesLoading());
             // Buscar curso por estudiantes
-            if (roleId === 2) {
-                const { data } = await virtEduApi.get(`/Users/${id}/Courses`);
+            if (role === 2) {
+                // console.log('consultando cursos de estudiante',studentId)
+                const { data } = await virtEduApi.get(`/Student/${studentId}/Courses`);
                 dispatch(onLoadCourses(data));
             }
         } catch (error) {

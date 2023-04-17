@@ -9,11 +9,11 @@ export const useGradeStore = () => {
         errorMessage,
         messageSaved,
     } = useSelector(state => state.grade);
-    const dispatch = useDispatch();
 
     const {
         id,
-        roleId,
+        role,
+        studentId
     } = useSelector(state => state.auth);
     const dispatch = useDispatch();
 
@@ -24,9 +24,9 @@ export const useGradeStore = () => {
     const startLoadingGradesByStudentId = async () => {
         try {
             // Buscar notas por estudiantes
-            if (roleId === 2) {
+            if (role === 2) {
                 dispatch(onSetGradesLoading());
-                const { data } = await virtEduApi.get(`/Users/${id}/Grades`);
+                const { data } = await virtEduApi.get(`/Student/${studentId}/Grades`);
                 dispatch(onLoadGrades(data));
             }
         } catch (error) {
