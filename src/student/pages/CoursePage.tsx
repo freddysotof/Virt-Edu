@@ -17,6 +17,7 @@ function CoursePage() {
     { courseTitle: "Tecnologia", courseId: "TEC315" },
     { courseTitle: "Educacion Fisica", courseId: "EDF101" },
     { courseTitle: "Seminario", courseId: "SEM201" },
+    { courseTitle: "Gaming", courseId: "GEM111" },
   ]);
 
   return (
