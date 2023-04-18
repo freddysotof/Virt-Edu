@@ -25,6 +25,8 @@ function CoursePage() {
   return (
     <Grid 
         container spacing={50}
+        display={'flex'}
+        flexWrap={'wrap'}
         maxWidth={1800} 
         >
       {coursesInfo.map((course: { courseTitle: string; courseId: string }) => (
