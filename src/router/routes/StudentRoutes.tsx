@@ -13,6 +13,7 @@ import CourseDescriptionPage from '../../student/pages/CourseDescriptionPage'
 import AssignmentPage from '../../student/pages/AssignmentPage'
 import AssignmentEditPage from '../../student/pages/AssignmentEditPage'
 import GradeDetailPage from '../../student/pages/GradeDetailPage'
+import AssignmentList from '../../student/pages/AssignmentList'
 
 // const {BackTop} = FloatButton;
 export const StudentRoutes = () => {
@@ -34,6 +35,7 @@ export const StudentRoutes = () => {
                     <Route path='/Grades/:id' element={<GradeDetailPage />}></Route>
                     <Route path='/Assignments' element={<AssignmentPage />}></Route>
                     <Route path='/Assignments/Edit' element={<AssignmentEditPage />}></Route>
+                    <Route path='/AssignmentList' element={<AssignmentList />}></Route>
                     <Route path='/*' element={<Navigate to="/" />}></Route>
 
                 </Routes>

@@ -1,0 +1,614 @@
+
+
+.courses {
+/* Courses */
+
+
+position: absolute;
+width: 203px;
+height: 61px;
+left: 216px;
+top: 49px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 50px;
+line-height: 61px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
+.assignment {
+  display: flex;
+  align-items: center;
+}
+
+.tabla1Icon {
+  position: absolute;
+  width: 173px;
+  height: 38px;
+  left: 150px;
+  top: 150px;
+  margin-right: 0px;
+}
+
+.assignmentN {
+  position: absolute;
+width: 173px;
+height: 38px;
+left: 260px;
+top: 150px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 38px;
+/* identical to box height */
+
+
+color: #21AFFF;
+}
+
+/* Código CSS IMG*/
+
+.box-image {
+  height: 50px;
+}
+
+.grid-item {
+  margin-right: 2rem;
+} 
+
+/*SUBTITULOS ASIGNACIONES*/
+
+.prueb{
+ /* subtitle grid 1*/
+
+position: absolute;
+width: 125px;
+height: 12px;
+left: 305px;
+top: 322px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+/* identical to box height */
+
+
+color: #B3B3B3;
+}
+.prueb1{
+  /* subtitle grid 1*/
+   
+ position: absolute;
+ width: 125px;
+ height: 12px;
+ left: 305px;
+ top: 435px;
+ 
+ font-family: 'Inter';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 10px;
+ line-height: 12px;
+ /* identical to box height */
+ 
+ 
+ color: #B3B3B3;
+ }
+ .prueb2{
+  /* subtitle grid 1*/
+   
+ position: absolute;
+ width: 125px;
+ height: 12px;
+ left: 305px;
+ top: 546px;
+ 
+ font-family: 'Inter';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 10px;
+ line-height: 12px;
+ /* identical to box height */
+ 
+ 
+ color: #B3B3B3;
+ }
+
+ .prueb3{
+  /* subtitle grid 1*/
+   
+ position: absolute;
+ width: 125px;
+ height: 12px;
+ left: 305px;
+ top: 660px;
+ 
+ font-family: 'Inter';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 10px;
+ line-height: 12px;
+ /* identical to box height */
+ 
+ 
+ color: #B3B3B3;
+ }
+ .prueb4{
+  /* subtitle grid 1*/
+   
+ position: absolute;
+ width: 125px;
+ height: 12px;
+ left: 305px;
+ top: 774px;
+ 
+ font-family: 'Inter';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 10px;
+ line-height: 12px;
+ /* identical to box height */
+ 
+ 
+ color: #B3B3B3;
+ }
+ .prueb5{
+  /* subtitle grid 1*/
+   
+ position: absolute;
+ width: 125px;
+ height: 12px;
+ left: 305px;
+ top: 886px;
+ 
+ font-family: 'Inter';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 10px;
+ line-height: 12px;
+ /* identical to box height */
+ 
+ 
+ color: #B3B3B3;
+ }
+ .prueb6{
+  /* subtitle grid 1*/
+   
+ position: absolute;
+ width: 125px;
+ height: 12px;
+ left: 305px;
+ top: 998px;
+ 
+ font-family: 'Inter';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 10px;
+ line-height: 12px;
+ /* identical to box height */
+ 
+ 
+ color: #B3B3B3;
+ }
+
+ /*TIEMPO/HR ASIGNACIONES*/
+
+ .t{
+  /* 24h 13m */
+
+
+position: absolute;
+width: 40px;
+height: 12px;
+left: 604px;
+top: 297.5px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height */
+
+
+color: #000000;
+ }
+ .t1{
+  /* 24h 13m */
+
+
+position: absolute;
+width: 40px;
+height: 12px;
+left: 604px;
+top: 410px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height */
+
+
+color: #000000;
+ }
+ .t2{
+  /* 24h 13m */
+
+
+position: absolute;
+width: 40px;
+height: 12px;
+left: 604px;
+top: 520px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height */
+
+
+color: #000000;
+ }
+ .t3{
+  /* 24h 13m */
+
+
+position: absolute;
+width: 40px;
+height: 12px;
+left: 604px;
+top: 630px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height */
+
+
+color: #000000;
+ }
+ .t4{
+  /* 24h 13m */
+
+
+position: absolute;
+width: 40px;
+height: 12px;
+left: 604px;
+top: 745px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height */
+
+
+color: #000000;
+ }
+ .t5{
+  /* 24h 13m */
+
+
+position: absolute;
+width: 40px;
+height: 12px;
+left: 604px;
+top: 860px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height */
+
+
+color: #000000;
+ }
+ .t6{
+  /* 24h 13m */
+
+
+position: absolute;
+width: 40px;
+height: 12px;
+left: 604px;
+top: 975px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height */
+
+
+color: #000000;
+ }
+
+
+ /*PORCENTAJE ASIGNACION*/
+
+ .p{
+  /* 48% */
+
+
+position: absolute;
+width: 19px;
+height: 12px;
+left: 842px;
+top: 297.5px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 12px;
+/* identical to box height */
+
+
+color: #000000;
+ }
+
+ .p1{
+  /* 48% */
+
+
+position: absolute;
+width: 19px;
+height: 12px;
+left: 842px;
+top: 410px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 12px;
+/* identical to box height */
+
+
+color: #000000;
+ }
+ .p2{
+  /* 48% */
+
+
+position: absolute;
+width: 19px;
+height: 12px;
+left: 842px;
+top: 520px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 12px;
+/* identical to box height */
+
+
+color: #000000;
+ }
+ .p3{
+  /* 48% */
+
+
+position: absolute;
+width: 19px;
+height: 12px;
+left: 842px;
+top: 630px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 12px;
+/* identical to box height */
+
+
+color: #000000;
+ }
+ .p4{
+  /* 48% */
+
+
+position: absolute;
+width: 19px;
+height: 12px;
+left: 842px;
+top: 745px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 12px;
+/* identical to box height */
+
+
+color: #000000;
+ }
+ .p5{
+  /* 48% */
+
+
+position: absolute;
+width: 19px;
+height: 12px;
+left: 842px;
+top:860px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 12px;
+/* identical to box height */
+
+
+color: #000000;
+ }
+ .p6{
+  /* 48% */
+
+
+position: absolute;
+width: 19px;
+height: 12px;
+left: 842px;
+top:975px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 12px;
+/* identical to box height */
+
+
+color: #000000;
+ }
+
+
+
+
+
+ /*calification*/
+ .c1{
+  /* Frame 56 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 16px;
+height: 12px;
+left: 1137px;
+top: 410px;
+ }
+ .c2{
+  /* Frame 56 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 16px;
+height: 12px;
+left: 1137px;
+top: 520px;
+ }
+ .c3{
+  /* Frame 56 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 16px;
+height: 12px;
+left: 1137px;
+top: 630px;
+ }
+ .c4{
+  /* Frame 56 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 16px;
+height: 12px;
+left: 1137px;
+top: 745px;
+ }
+ .c5{
+  /* Frame 56 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 16px;
+height: 12px;
+left: 1137px;
+top:860px;
+ }
+ .c6{
+  /* Frame 56 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 16px;
+height: 12px;
+left: 1137px;
+top:975px;
+ }
+ .c{
+  /* Frame 56 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 16px;
+height: 12px;
+left: 1137px;
+top: 287.5px;
+ }
