@@ -19,7 +19,9 @@ export const useAuthStore = () => {
             email,
             role,
             photoUrl,
-            studentId
+            studentId,
+            tuition,
+            phone
         } = authState
     const dispatch = useDispatch();
 
@@ -78,6 +80,8 @@ export const useAuthStore = () => {
         roleName: role === 2 ? 'Estudiante' : 'Maestro',
         studentId,
         photoUrl,
+        tuition,
+        phone
         //* Metodos
         startLogin,
         startLogout,
