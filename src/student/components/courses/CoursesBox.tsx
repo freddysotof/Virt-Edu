@@ -26,7 +26,7 @@ function CoursesBox(props: { courseTitle: string | number | boolean | React.Reac
           </p>
           <p className={styles.ins356}>
             <span>
-              <span>{props.courseCode}</span>
+              <span>{props.courseId}</span>
             </span>
           </p>
         </div>
