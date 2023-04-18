@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from "../../assets/css/courses/CoursesBox.module.css"
 
-function CoursesBox(props) {
+function CoursesBox(props: { courseTitle: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; courseId: any }) {
   return (
     <div className={styles.courses}>
       <div className={styles.vectorParent}>
