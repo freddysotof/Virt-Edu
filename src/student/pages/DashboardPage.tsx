@@ -7,13 +7,13 @@ import CoursesBox from "../components/courses/CoursesBox";
 
 function DashboardPage(){
   const coursesInfo = [
-    { courseTitle: "Quimica", courseId: "CBA356" },
+    { courseTitle: "Quimica", courseId: "e3b9452c-a7bc-45f9-b664-8740cf52ab8a" },
     { courseTitle: "Matematica", courseId: "CBA302" },
     { courseTitle: "Redaccion", courseId: "LIT215" },
-    { courseTitle: "Musica", courseId: "MUS103" },
-    { courseTitle: "Historia", courseId: "HIS210" },
+    { courseTitle: "Musica", courseId: "e3b9452c-a7bc-45f9-b664-8740cf52ab8a" },
+    { courseTitle: "Historia", courseId: "e3b9452c-a7bc-45f9-b664-8740cf52ab8a" },
     { courseTitle: "Tecnologia", courseId: "TEC315" },
-    { courseTitle: "Educacion Fisica", courseId: "EDF101" },
+    { courseTitle: "Educacion Fisica", courseId: "e3b9452c-a7bc-45f9-b664-8740cf52ab8a" },
     { courseTitle: "Seminario", courseId: "SEM201" },
   ];
 
