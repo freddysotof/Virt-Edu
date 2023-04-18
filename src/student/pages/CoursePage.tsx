@@ -22,6 +22,8 @@ function CoursePage() {
     { courseTitle: "Seminario", courseId: "SEM201" },
   ];
 
+
+
   return (
     <>
       <Grid container spacing={2}>

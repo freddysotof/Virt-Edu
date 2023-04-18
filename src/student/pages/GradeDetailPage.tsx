@@ -16,15 +16,18 @@ const GradeDetailPage = () => {
   } = useGradeStore();
 
   useEffect(() => {
-    startLoadingGradeById(id)
-  }, [id])
-  
+    const onLoadAsync = async()=>{
+      await  startLoadingGradeById(id)
+    }
+    onLoadAsync();
+    
+  }, [])
 
   const onNavigateBack = ()=>{
     navigate(-1);
   }
 
-  if (!activeGrade)
+  if (!id)
     return <Navigate to="/Grades" />
 
 
