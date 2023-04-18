@@ -38,7 +38,7 @@ const onClick = async (courseId)=>{
           </p>
           <p className={styles.ins356}>
             <span>
-              <span>{props.courseCode}</span>
+              <span>{props.courseId}</span>
             </span>
           </p>
         </div>
