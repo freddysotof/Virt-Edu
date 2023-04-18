@@ -396,7 +396,7 @@
     position: absolute;
   }
   .e {
-    top: 77.5px;
+    top: 95px;
     left: 71px;
     font-size: var(--font-size-45xl);
     font-weight: 600;
@@ -509,7 +509,7 @@
     font-weight: 600;
   }
   .dashboardChild {
-    position: absolute;
+    position: relative;
     top: 54px;
     left: 1612px;
     width: 66px;

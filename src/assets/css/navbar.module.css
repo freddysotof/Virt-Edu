@@ -511,7 +511,7 @@
   .dashboardChild {
     position: absolute;
     top: 54px;
-    left: 1612px;
+    left: 1650px;
     width: 66px;
     height: 66px;
     object-fit: cover;
@@ -526,7 +526,7 @@
   }
   .student {
     top: 90px;
-    left: 1518px;
+    left: 1488px;
     font-weight: 300;
     color: var(--style);
   }

@@ -1,6 +1,6 @@
 
 import { Fragment } from "react";
-import styles from "../assets/css/sidebar.module.css";
+import styles from "../student/assets/css/dashboard.module.css"
 import { useAuthStore } from "../hooks";
 import { NavLink, useLocation } from "react-router-dom";
 
