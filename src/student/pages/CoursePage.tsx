@@ -3,10 +3,13 @@ import React, { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
 import { useCheckAuth } from "../../hooks";
 import CoursesBox from "../components/courses/CoursesBox";
+import { useCourseStore } from "../../hooks/useCourseStore";
 
 
 function CoursePage() {
   const { status } = useCheckAuth();
+
+  const {courses} = useCourseStore();
 
   const [coursesInfo, setCoursesInfo] = useState([
     { courseTitle: "Quimica", courseId: "CBA356" },
@@ -17,11 +20,18 @@ function CoursePage() {
     { courseTitle: "Tecnologia", courseId: "TEC315" },
     { courseTitle: "Educacion Fisica", courseId: "EDF101" },
     { courseTitle: "Seminario", courseId: "SEM201" },
+    { courseTitle: "Gaming", courseId: "GEM111" },
   ]);
+
+
 
   return (
     <Grid 
         container spacing={50}
+        display={'flex'}
+        flexWrap={'wrap'}
+        // flexDirection={'row'}
+        width={'100%'}
         maxWidth={1800} 
         >
       {coursesInfo.map((course: { courseTitle: string; courseId: string }) => (

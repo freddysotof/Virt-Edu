@@ -7,6 +7,7 @@ import CourseCompletion from '../components/courses/CourseCompletion';
 
 function CourseDescriptionPage() {
   const { id, ...rest } = useParams();
+
   const navigate=useNavigate();
 
   const {
@@ -14,16 +15,29 @@ function CourseDescriptionPage() {
     activeCourse
   } = useCourseStore();
 
+
+
   useEffect(() => {
-    startLoadingCourseById(id)
-  }, [id])
+    const onLoadAsync = async()=>{
+      await  startLoadingCourseById(id)
+    }
+    onLoadAsync();
+    
+  }, [])
+  
+  // useEffect(() => {
+  //   return async () => {
+  //     
+  //   }
+   
+  // }, [id])
   
 
   const onNavigateBack = ()=>{
     navigate(-1);
   }
 
-  if (!activeCourse)
+  if (!id)
     return <Navigate to="/Courses" />
 
 
@@ -47,7 +61,7 @@ const imageUrl = 'https://www.disruptiva.media/wp-content/uploads/2020/03/Educac
   />
   </div>
   <div className={classes.courseCompletionContainer}>
-  <CourseCompletion courseId={courseId}/>
+  <CourseCompletion courseId={activeCourse?.id}/>
   </div>
   </div>
   </>

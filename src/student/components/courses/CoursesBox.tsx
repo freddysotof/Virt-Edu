@@ -1,8 +1,20 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import styles from "../../assets/css/courses/CoursesBox.module.css"
+import { useCourseStore } from '../../../hooks/useCourseStore'
 
 function CoursesBox(props) {
+const navigate = useNavigate();
+const {
+  startLoadingCourseById
+
+} = useCourseStore();
+
+const onClick = async (courseId)=>{
+  await startLoadingCourseById(courseId)
+  navigate(`/Courses/${courseId}`)
+}
+
   return (
     <div className={styles.courses}>
       <div className={styles.vectorParent}>
@@ -26,15 +38,12 @@ function CoursesBox(props) {
           </p>
           <p className={styles.ins356}>
             <span>
-              <span>{props.courseCode}</span>
+              <span>{props.courseId}</span>
             </span>
           </p>
         </div>
-        <NavLink to={`/Courses/${props.courseId}`}>
-
-          <button className={styles.groupInner} />
+          <button className={styles.groupInner} onClick={()=>onClick(props.courseId)} />
           <div className={styles.seeMore}>See more</div>
-        </NavLink>
       </div>
     </div>
   )
