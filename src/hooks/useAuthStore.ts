@@ -81,7 +81,7 @@ export const useAuthStore = () => {
         studentId,
         photoUrl,
         tuition,
-        phone
+        phone,
         //* Metodos
         startLogin,
         startLogout,

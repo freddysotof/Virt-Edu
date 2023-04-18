@@ -12,7 +12,7 @@ const {
 
 const onClick = async (courseId)=>{
   await startLoadingCourseById(courseId)
-  navigate(`${courseId}`)
+  navigate(`/Courses/${courseId}`)
 }
 
   return (

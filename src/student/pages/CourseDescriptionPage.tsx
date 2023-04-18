@@ -7,6 +7,7 @@ import CourseCompletion from '../components/courses/CourseCompletion';
 
 function CourseDescriptionPage() {
   const { id, ...rest } = useParams();
+
   const navigate=useNavigate();
 
   const {
