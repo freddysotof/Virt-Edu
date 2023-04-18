@@ -34,12 +34,11 @@ export const useAuthStore = () => {
                 if (status === 200 || status == 204) {
                     // Obtener id estudiante si tiene rol estudiante
                     if (data.user.role === 2) {
-                        const { data: userInfo } = await virtEduApi.get(`/User/${data.user.id}`);
+                        // const { data: userInfo } = await virtEduApi.get(`/User/${data.user.id}`);
                     // dispatch(onLogin({ ...data.user }));
                     localStorage.setItem('token', data.token)
-                    localStorage.setItem('authUser', JSON.stringify({ ...data.user, studentId: userInfo?.student?.id }));
-                   
-                    dispatch(onLogin({ ...data.user, studentId: userInfo?.student?.id }));
+                    localStorage.setItem('authUser', JSON.stringify({ ...data.user, studentId: data?.user?.student?.id }));
+                    dispatch(onLogin({ ...data.user, studentId: data?.user?.student?.id,tuition:data?.user?.student?.tuition }));
                     }
                 } else {
                     dispatch(onLogout({ errorMessage: resp.statusText }));

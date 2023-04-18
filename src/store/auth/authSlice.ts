@@ -9,6 +9,7 @@ const initialAuthState= {
     photoUrl:null,
     phone:null,
     studentId:null,
+    tuition:null,
     // employeeCode: null,
     // authenticationType: 2,
     errorMessage: null,
@@ -26,6 +27,7 @@ export const authSlice = createSlice({
             state.photoUrl = payload.photoUrl;
             state.role = payload.role??initialAuthState.role;
             state.studentId= payload.studentId;
+            state.tuition= payload.tuition;
             // state.authenticationType = payload.authenticationType;
             // state.employeeCode = payload.employeeCode;
             state.errorMessage = null;
@@ -40,6 +42,7 @@ export const authSlice = createSlice({
             state.photoUrl=null;
             state.role=null;
             state.studentId=null;
+            state.tuition=null;
 
             // state.employeeCode = null;
             // state.authenticationType = payload?.authenticationType;
