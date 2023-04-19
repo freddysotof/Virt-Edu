@@ -26,23 +26,36 @@ const UnitPage = () => {
     activeCourse,
     setActiveCourse,
     setActiveUnit,
+    setActiveAssignment,
     activeUnit
   } = useCourseStore();
 
-  // useEffect(() => {
-  //   // setActiveUnit()
-  //   // const onLoadAsync = async()=>{
-  //   //   // await  startLoadingCourseById(id)
-  //   // }
-  //   // onLoadAsync();
+  useEffect(() => {
+    const onLoadAsync = async () => {
+      await startLoadingCourseById(courseId)
+    }
+    onLoadAsync();
 
-  // }, [])
+  }, [])
+
+  useEffect(() => {
+    if (activeCourse)
+      setActiveUnit({ ...activeCourse }.units.find(x => x.id === unitId))
+  }, [activeCourse])
+
 
 
   const onNavigateBack = () => {
+    setActiveUnit(null);
     navigate(-1);
-    setActiveCourse(null);
   }
+
+  const onClick = (assignment) => {
+
+    setActiveAssignment(assignment);
+    navigate(`Assignments/${assignment.id}`);
+  }
+
 
 
 
@@ -62,45 +75,40 @@ const UnitPage = () => {
               <div className={styles.t1}>24h 13m</div>
               <div className={styles.t2}>24h 13m</div>
               <div className={styles.t3}>24h 13m</div>
-              <div className={styles.t4}>24h 13m</div>
+              {/* <div className={styles.t4}>24h 13m</div>
               <div className={styles.t5}>24h 13m</div>
-              <div className={styles.t6}>24h 13m</div>
+              <div className={styles.t6}>24h 13m</div> */}
 
               <div className={styles.p}>46%</div>
               <div className={styles.p1}>46%</div>
               <div className={styles.p2}>46%</div>
               <div className={styles.p3}>46%</div>
-              <div className={styles.p4}>46%</div>
+              {/* <div className={styles.p4}>46%</div>
               <div className={styles.p5}>46%</div>
-              <div className={styles.p6}>46%</div>
+              <div className={styles.p6}>46%</div> */}
 
               <div className={styles.c}>5/6</div>
               <div className={styles.c1}>5/6</div>
               <div className={styles.c2}>5/6</div>
               <div className={styles.c3}>5/6</div>
-              <div className={styles.c4}>5/6</div>
+              {/* <div className={styles.c4}>5/6</div>
               <div className={styles.c5}>5/6</div>
-              <div className={styles.c6}>5/6</div>
+              <div className={styles.c6}>5/6</div> */}
             </Grid>
           </Grid>
         </Grid>
         <div className={styles.assignment}>
 
-          <img className={styles.tabla1Icon} alt="" src="/Assets/svg/Assignments/group-41.svg" style={{cursor:'pointer'}} onClick={onNavigateBack} />
-          <div className={styles.assignmentN} style={{width:'100%'}}>{activeCourse?.name} - {activeCourse?.code} - {activeUnit?.title}</div>
+          <img className={styles.tabla1Icon} alt="" src="/Assets/svg/Assignments/group-41.svg" style={{ cursor: 'pointer' }} onClick={onNavigateBack} />
+          <div className={styles.assignmentN} style={{ width: '100%' }}>{activeCourse?.name} - {activeCourse?.code} - {activeUnit?.title}</div>
 
         </div>
       </div>
-      <Grid
-       container 
-       direction="column" 
-      //  maxWidth={1800} 
-       width={'100%'}
-       spacing={4}
-       >
+      <Grid container direction="column" maxWidth={1800} spacing={4}>
         {activeUnit?.assignments.map((assignment) => (
-          <Grid key={assignment.id} item>
+          <Grid onClick={() => onClick(assignment)} style={{ cursor: 'pointer' }} key={assignment.id} item>
             <Box
+
               sx={{
                 width: "982px",
                 height: "81px",
@@ -117,11 +125,11 @@ const UnitPage = () => {
 
                 </Grid>
                 <Grid item>{assignment.name}</Grid>
-                {/* <div className={styles.prueb}>{assignment.description}</div>
+                <div className={styles.prueb}>{assignment.description}</div>
                 <div className={styles.prueb1}>Asignatura x</div>
                 <div className={styles.prueb2}>Asignatura x</div>
                 <div className={styles.prueb3}>Asignatura x</div>
-                <div className={styles.prueb4}>Asignatura x</div>
+                {/* <div className={styles.prueb4}>Asignatura x</div>
                 <div className={styles.prueb5}>Asignatura x</div>
                 <div className={styles.prueb6}>Asignatura x</div> */}
 

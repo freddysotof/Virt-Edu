@@ -1,17 +1,14 @@
 
 import React, { Fragment } from "react";
 import styles from "../assets/css/dashboard.module.css";
-import { Box, Grid } from "@mui/material";
+import { Box } from "@mui/material";
 import Breadcrumb from "../../components/Breadcrumbs/Breadcrumb";
 import CoursesBox from "../components/courses/CoursesBox";
 import { useScheduleStore } from "../../hooks/useScheduleStore";
 import { format } from "date-fns";
 import { useCourseStore } from "../../hooks/useCourseStore";
-import { useNavigate } from "react-router-dom";
 
 function DashboardPage() {
-  const navigate = useNavigate();
-
   const coursesInfo = [
     { courseTitle: "Quimica", courseId: "e3b9452c-a7bc-45f9-b664-8740cf52ab8a" },
     { courseTitle: "Matematica", courseId: "CBA302" },
@@ -25,11 +22,7 @@ function DashboardPage() {
 
   const { events, upcomingTasks, todayTasks } = useScheduleStore();
 
-  const { courses } = useCourseStore();
-
-  const onClickEvent = (studentEvent) => {
-    navigate(`/Courses/${studentEvent.courseId}/Units/${studentEvent.unitId}/Assignments/${studentEvent.taskId}`);
-  }
+  const {courses} = useCourseStore();
   return (
     <Fragment>
       <Breadcrumb />
@@ -40,7 +33,7 @@ function DashboardPage() {
 
       {
         upcomingTasks.map((event) => (
-          <button className={styles.rectangleGroup} style={{cursor:'pointer'}} onClick={() => onClickEvent(event)}>
+          <button className={styles.rectangleGroup}>
             <div className={styles.groupChild} />
             <div className={styles.technology}>{event.name}</div>
             <div className={styles.may1216}>{format(new Date(event.dueDate), "MMMM dd")}</div>
@@ -56,7 +49,7 @@ function DashboardPage() {
 
       {
         todayTasks.map((event) => (
-          <div className={styles.rectangleContainer} style={{cursor:'pointer'}}  onClick={() => onClickEvent(event)}>
+          <div className={styles.rectangleContainer}>
             <div className={styles.groupItem} />
             <div className={styles.math}>{event.name}</div>
             <div className={styles.am}>{format(new Date(event.dueDate), "hh a")}</div>
@@ -203,25 +196,7 @@ function DashboardPage() {
 
       <div className={styles.myCourses}>My Courses</div>
 
-      <Grid
-        container spacing={50}
-        display={'flex'}
-        flexWrap={'wrap'}
-        // flexDirection={'row'}
-        width={'100%'}
-        maxWidth={1800}
-        paddingTop={35}
-      >
-        {courses.map((course) => (
-          <Grid item xs={5} sm={12} md={10} lg={3} key={course.id} marginBottom={3} marginLeft={-3}>
-            <CoursesBox
-              courseTitle={course.name}
-              courseId={course.id}
-            />
-          </Grid>
-        ))}
-      </Grid>
-      {/* <Box sx={{ pt: 35 }}>
+      <Box sx={{ pt: 35 }}>
         <CoursesBox
           courseTitle={coursesInfo[4].courseTitle}
           courseId={coursesInfo[4].courseId}
@@ -240,7 +215,7 @@ function DashboardPage() {
           courseTitle={coursesInfo[6].courseTitle}
           courseId={coursesInfo[6].courseId}
         ></CoursesBox>
-      </Box> */}
+      </Box>
 
       {/* <div className={styles.courseCompleted}>Course completed</div>
       <div className={styles.div1}>33%</div>

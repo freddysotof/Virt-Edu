@@ -10,7 +10,7 @@ import GradePage from '../../student/pages/GradePage'
 import { ProfileLayout } from '../../layout/ProfileLayout'
 import CourseDetailPage from '../../student/pages/CourseDetailPage'
 import CourseDescriptionPage from '../../student/pages/CourseDescriptionPage'
-import AssignmentPage from '../../student/pages/Assignments'
+import AssignmentPage from '../../student/pages/AssignmentPage'
 import AssignmentEditPage from '../../student/pages/AssignmentEditPage'
 import GradeDetailPage from '../../student/pages/GradeDetailPage'
 import AssignmentList from '../../student/pages/UnitPage'
@@ -31,11 +31,13 @@ export const StudentRoutes = () => {
                     <Route path='/Courses/:id/Description' element={<CourseDescriptionPage />}></Route>
                     <Route path='/Courses/:id' element={<CourseDescriptionPage />}></Route>
                     <Route path='/Courses/:courseId/Units/:unitId' element={<UnitPage />}></Route>
+                    <Route path='/Courses/:courseId/Units/:unitId/Assignments/:assignmentId' element={<AssignmentPage />}></Route>
+                    <Route path='/Courses/:courseId/Units/:unitId/Assignments/:assignmentId/Edit' element={<AssignmentEditPage />}></Route>
                     <Route path='/Messages' element={<MessagePage />}></Route>
                     <Route path='/Schedule' element={<SchedulePage />}></Route>
                     <Route path='/Grades' element={<GradePage />}></Route>
                     <Route path='/Grades/:id' element={<GradeDetailPage />}></Route>
-                    <Route path='/Assignments' element={<AssignmentPage />}></Route>
+                    {/* <Route path='/Assignments' element={<AssignmentPage />}></Route> */}
                     <Route path='/Assignments/Edit' element={<AssignmentEditPage />}></Route>
                     <Route path='/AssignmentList' element={<AssignmentList />}></Route>
                     <Route path='/*' element={<Navigate to="/" />}></Route>
