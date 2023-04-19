@@ -4,6 +4,9 @@ import { useCourseStore } from '../../hooks/useCourseStore';
 import classes from '../assets/css/courses/CourseDescription.module.css';
 import BasicTabs from '../components/courses/BasicTabs';
 import CourseCompletion from '../components/courses/CourseCompletion';
+import UnitsBox from '../components/courses/UnitsBox';
+import { FiArrowLeft } from 'react-icons/fi';
+
 
 function CourseDescriptionPage() {
   const { id, ...rest } = useParams();
@@ -14,8 +17,6 @@ function CourseDescriptionPage() {
     startLoadingCourseById,
     activeCourse
   } = useCourseStore();
-
-
 
   useEffect(() => {
     const onLoadAsync = async()=>{
@@ -37,33 +38,44 @@ function CourseDescriptionPage() {
     navigate(-1);
   }
 
+  console.log(activeCourse);
+
   if (!id)
     return <Navigate to="/Courses" />
 
 
-const imageUrl = 'https://www.disruptiva.media/wp-content/uploads/2020/03/Educacio%CC%81n-virtual-02-1024x576.jpg';
+const imageUrl = activeCourse?.photoUrl;
   return (
     <>
-        
-  
-    <div className={classes.courseDescriptionContainer}>
+      <div className={classes.courseDescriptionContainer}>
+      <div className={classes.mainContainer}>
+      <div className={classes.head}>
+      
+  <FiArrowLeft className={`${classes.icon} ${classes.iconArrow}`} />
+
+
+      <h2 className={classes.courseTitle}>{activeCourse?.code}</h2>
+      </div>
+      <UnitsBox />
     <div >
       <div className={classes.imageContainer}>
         <img src={imageUrl} alt="Course Image" className={classes.image} />
       </div>
     <BasicTabs
     items={[
-      { label: 'Description', content: <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum eros sed nisl malesuada, id consequat orci dignissim. Morbi id aliquet libero. Fusce placerat sit amet nisl in pretium. Phasellus lorem nisi, posuere nec ex ut, pellentesque malesuada nunc. Proin facilisis aliquet nibh non dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin molestie auctor nibh non porta. Suspendisse potenti. Mauris malesuada nec erat ac sollicitudin. Vivamus vitae scelerisque neque. Duis suscipit ultrices efficitur. Sed in libero porta, consequat erat in, dictum lectus. Nulla eu venenatis justo. Nam feugiat lacus sit amet ante efficitur varius. Donec vel enim id lorem fringilla facilisis.</div> },
+      { label: 'Description', content: <div>{activeCourse?.units[0].content}</div> },
       { label: 'Revisions', content: <div>blabladsdsdas</div> },
       { label: 'Discussions', content: <div>Lorem ipsum dolo</div> },
       { label: 'Resources', content: <div>Lorem ipsum dolor sit amet, c.</div> },
     ]}
   />
   </div>
+  </div>
   <div className={classes.courseCompletionContainer}>
   <CourseCompletion courseId={activeCourse?.id}/>
   </div>
   </div>
+
   </>
         
   
