@@ -4,6 +4,7 @@ import { useCourseStore } from '../../hooks/useCourseStore';
 import classes from '../assets/css/courses/CourseDescription.module.css';
 import BasicTabs from '../components/courses/BasicTabs';
 import CourseCompletion from '../components/courses/CourseCompletion';
+import UnitsBox from '../components/courses/UnitsBox';
 
 function CourseDescriptionPage() {
   const { id, ...rest } = useParams();
@@ -37,16 +38,19 @@ function CourseDescriptionPage() {
     navigate(-1);
   }
 
+  console.log(activeCourse);
+
   if (!id)
     return <Navigate to="/Courses" />
 
 
-const imageUrl = 'https://www.disruptiva.media/wp-content/uploads/2020/03/Educacio%CC%81n-virtual-02-1024x576.jpg';
+const imageUrl = activeCourse?.photoUrl;
   return (
     <>
-        
-  
-    <div className={classes.courseDescriptionContainer}>
+      <div className={classes.courseDescriptionContainer}>
+      <div className={classes.mainContainer}>
+      <h2 className={classes.courseTitle}>{activeCourse?.code}</h2>
+      <UnitsBox />
     <div >
       <div className={classes.imageContainer}>
         <img src={imageUrl} alt="Course Image" className={classes.image} />
@@ -60,10 +64,12 @@ const imageUrl = 'https://www.disruptiva.media/wp-content/uploads/2020/03/Educac
     ]}
   />
   </div>
+  </div>
   <div className={classes.courseCompletionContainer}>
   <CourseCompletion courseId={activeCourse?.id}/>
   </div>
   </div>
+
   </>
         
   

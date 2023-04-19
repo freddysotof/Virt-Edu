@@ -12,7 +12,7 @@ const CourseDetailPage = ({ courseId }) => {
   return (
     <div className={classes.courseId}>
       <CourseInfo title={title} description={description} imageUrl={imageUrl} />
-      <UnitsBox unitTitle={"Units"}/>
+      <UnitsBox unitTitle="Units"/>
     </div>
   );
 };

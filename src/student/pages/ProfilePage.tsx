@@ -21,7 +21,8 @@ const ProfilePage = (props: ProfileProps) => {
     photoUrl,
     displayName,
     email,
-    phone
+    phone,
+    tuition
   } = useAuthStore();
 
 
@@ -73,7 +74,7 @@ const ProfilePage = (props: ProfileProps) => {
           </div>
           <div className={classes.enrollment}>
             <h3 className={classes.title}>Enrollment</h3>
-            <p className={classes.field}>{enrollment}</p>
+            <p className={classes.field}>{tuition}</p>
           </div>
           <div className={classes.phone}>
             <h3 className={classes.title}>Phone</h3>
