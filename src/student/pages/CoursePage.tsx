@@ -34,7 +34,7 @@ function CoursePage() {
         width={'100%'}
         maxWidth={1800} 
         >
-      {coursesInfo.map((course: { courseTitle: string; courseId: string }) => (
+      {courses.map((course: { courseTitle: string; courseId: string }) => (
         <Grid item xs={5} sm={12} md={10} lg={2} key={course.courseId} marginBottom={3}>
           <CoursesBox
             courseTitle={course.courseTitle}

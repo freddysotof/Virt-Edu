@@ -4,8 +4,11 @@ import styles from "../assets/css/dashboard.module.css";
 import { Box } from "@mui/material";
 import Breadcrumb from "../../components/Breadcrumbs/Breadcrumb";
 import CoursesBox from "../components/courses/CoursesBox";
+import { useScheduleStore } from "../../hooks/useScheduleStore";
+import { format } from "date-fns";
+import { useCourseStore } from "../../hooks/useCourseStore";
 
-function DashboardPage(){
+function DashboardPage() {
   const coursesInfo = [
     { courseTitle: "Quimica", courseId: "e3b9452c-a7bc-45f9-b664-8740cf52ab8a" },
     { courseTitle: "Matematica", courseId: "CBA302" },
@@ -17,25 +20,49 @@ function DashboardPage(){
     { courseTitle: "Seminario", courseId: "SEM201" },
   ];
 
+  const { events, upcomingTasks, todayTasks } = useScheduleStore();
+
+  const {courses} = useCourseStore();
   return (
     <Fragment>
-      <Breadcrumb/>
+      <Breadcrumb />
       <div className={styles.upcomingTasks}>Upcoming Tasks</div>
       <div className={styles.today}>Today</div>
       <div className={styles.dashboardItem} />
       <div className={styles.dashboardInner} />
-      <button className={styles.rectangleGroup}>
-        <div className={styles.groupChild} />
-        <div className={styles.technology}>Technology</div>
-        <div className={styles.may1216}>May 12-16</div>
 
-        <div className={styles.rightArrow1}>
-          <img className={styles.groupIcon16} alt="" src="/Assets/svg/group16.svg"/>
-        </div>
+      {
+        upcomingTasks.map((event) => (
+          <button className={styles.rectangleGroup}>
+            <div className={styles.groupChild} />
+            <div className={styles.technology}>{event.name}</div>
+            <div className={styles.may1216}>{format(new Date(event.dueDate), "MMMM dd")}</div>
 
-      </button>
+            <div className={styles.rightArrow1}>
+              <img className={styles.groupIcon16} alt="" src="/Assets/svg/group16.svg" />
+            </div>
 
-      <div className={styles.rectangleContainer}>
+          </button>
+        ))
+      }
+
+
+      {
+        todayTasks.map((event) => (
+          <div className={styles.rectangleContainer}>
+            <div className={styles.groupItem} />
+            <div className={styles.math}>{event.name}</div>
+            <div className={styles.am}>{format(new Date(event.dueDate), "hh a")}</div>
+
+            <button className={styles.rightArrow1}>
+              <img className={styles.groupIcon16} alt="" src="/Assets/svg/group17.svg" />
+            </button>
+
+          </div>
+        ))
+      }
+
+      {/* <div className={styles.rectangleContainer}>
         <div className={styles.groupItem} />
         <div className={styles.math}>Technology</div>
         <div className={styles.am}>10 AM</div>
@@ -44,8 +71,8 @@ function DashboardPage(){
           <img className={styles.groupIcon16} alt="" src="/Assets/svg/group17.svg"/>
         </button>
 
-      </div>
-
+      </div> */}
+      {/* 
       <div className={styles.groupDiv}>
         <div className={styles.groupChild} />
         <div className={styles.math}>Math</div>
@@ -165,8 +192,8 @@ function DashboardPage(){
             src="/Assets/svg/group17.svg"
           />
         </button>
-      </div>
-      
+      </div> */}
+
       <div className={styles.myCourses}>My Courses</div>
 
       <Box sx={{ pt: 35 }}>
@@ -189,7 +216,7 @@ function DashboardPage(){
           courseId={coursesInfo[6].courseId}
         ></CoursesBox>
       </Box>
-      
+
       {/* <div className={styles.courseCompleted}>Course completed</div>
       <div className={styles.div1}>33%</div>
       <img
