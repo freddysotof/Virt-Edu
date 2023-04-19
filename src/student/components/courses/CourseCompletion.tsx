@@ -1,8 +1,16 @@
 import React from 'react';
 import classes from '../../assets/css/courses/CourseCompletion.module.css';
 import Assignment from './Assignment';
+import { useCourseStore } from '../../../hooks/useCourseStore';
+
 
 function CourseCompletion({ courseId }) {
+
+  const {
+    startLoadingCourseById,
+    activeCourse
+  } = useCourseStore();
+
   const assignments = [
     { id: "1", title: "suma bla bla bla bla bla bla bla bla bla bla", date: "1/2/2001", completed: true },
     { id: "2", title: "resta bla bla bla bla bla bla bla bla bla blanpm", date: "2/2/2001", completed: true },
@@ -30,15 +38,17 @@ function CourseCompletion({ courseId }) {
         <div className={classes.progressBarCompleted} style={{ width: `${(completedAssignments / totalAssignments) * 100}%`, backgroundColor: '#FFA800' }}></div>
       </div>
       <div className={classes.assignmentsContainer}>
-        {assignments.map((assignment, index) => (
+        {activeCourse?.units.map((unit, index) =>{
+          return unit?.assignments.map((assignment,index) => (
           <div key={assignment.id} className={classes.assignment}>
             <span className={classes.assignmentNumber}>{`${index + 1}`}</span>
             <Assignment
               {...assignment}
-              title={assignment.title.length > 80 ? `${assignment.title.slice(0, 30)}...` : assignment.title} // Establecer un máximo de caracteres
+              title={assignment.name.length > 80 ? `${assignment.name.slice(0, 30)}...` : assignment.name} // Establecer un máximo de caracteres
             />
           </div>
-        ))}
+          ))
+        } )}
       </div>
     </div>
   );
