@@ -18,7 +18,17 @@ export const scheduleSlice = createSlice({
             if (payload) {
                 payload.forEach(event => {
                     const exists = state.events
-                        .some(dbEvent => dbEvent.id === event.id);
+                        .some(dbEvent => {
+                            if (dbEvent.taskType === "Assignment") {
+                                return dbEvent.assignment?.id === event.assignment?.id
+                            }
+
+
+                            if (dbEvent.taskType === "Quiz") {
+                                return dbEvent.quiz?.id === event.quiz?.id
+                            }
+
+                        });
                     if (!exists)
                         state.events.push(event);
 
@@ -29,19 +39,19 @@ export const scheduleSlice = createSlice({
             state.activeEvent = payload
             state.isLoading = false;
         },
-      
-        onClearEvents:(state)=>{
-            state.events=[];
-            state.activeEvent=null;
-        
+
+        onClearEvents: (state) => {
+            state.events = [];
+            state.activeEvent = null;
+
         }
     }
 });
 // Action creators are generated for each case reducer function
-export const { 
+export const {
     onSetEventsLoading,
     onLoadEvents,
     onSetActiveEvent,
-    onClearEvents 
+    onClearEvents
 } = scheduleSlice.actions;
 //! https://react-redux.js.org/tutorials/quick-start

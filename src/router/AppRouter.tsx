@@ -23,7 +23,6 @@ export const AppRouter = () => {
 
   const { startLoadingGradesByStudentId } = useGradeStore();
   useEffect(() => {
-    console.log(status);
     if (status === 'authenticated') {
       startLoadingCoursesByUser();
       startLoadingEventsByUser();

@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { virtEduApi } from '../api';
 import { onLoadEvents, onSetActiveEvent, onSetEventsLoading } from '../store';
+import { compareDates } from '../helpers';
 export const useScheduleStore = () => {
     const {
         events,
@@ -9,7 +10,7 @@ export const useScheduleStore = () => {
         errorMessage,
         messageSaved,
     } = useSelector(state => state.schedule);
-   
+
     const {
         id,
         role,
@@ -48,11 +49,21 @@ export const useScheduleStore = () => {
 
 
 
-
-
     return {
         //* Propiedades
         events,
+        upcomingTasks: events.filter(task => {
+            var today = new Date().toLocaleDateString('EN-ES');
+            var dueDate = new Date(task.dueDate).toLocaleDateString('EN-ES');
+            if (today !== dueDate && compareDates(task.dueDate, new Date().toISOString()) == 1)
+                return task;
+        }),
+        todayTasks: events.filter(task => {
+            var today = new Date().toLocaleDateString('EN-ES');
+            var dueDate = new Date(task.dueDate).toLocaleDateString('EN-ES');
+            if (today === dueDate)
+                return task;
+        }),
         activeEvent,
         isLoading,
         errorMessage,
