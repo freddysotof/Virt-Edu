@@ -1,10 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { virtEduApi } from '../api';
-import { onLoadCourses, onSetActiveaAssignment, onSetActiveCourse, onSetCoursesLoading } from '../store';
+import { onLoadCourses, onSetActiveAssignment, onSetActiveCourse, onSetActiveQuiz, onSetActiveUnit, onSetCoursesLoading } from '../store';
 export const useCourseStore = () => {
     const {
         courses,
         activeCourse,
+        activeAssignment,
+        activeQuiz,
+        activeUnit,
         isLoading,
         errorMessage,
         messageSaved,
@@ -33,7 +36,7 @@ export const useCourseStore = () => {
         try {
             const { data } = await virtEduApi.get(`/Assignments/${assignmentId}`)
             if (data)
-                dispatch(onSetActiveaAssignment(data))
+                dispatch(onSetActiveAssignment(data))
         } catch (error) {
             console.log(error)
         }
@@ -44,7 +47,7 @@ export const useCourseStore = () => {
         try {
             const { data } = await virtEduApi.get(`/Quizzes/${quizId}`)
             if (data)
-                dispatch(onSetActiveaAssignment(data))
+                dispatch(onSetActiveQuiz(data))
         } catch (error) {
             console.log(error)
         }
@@ -64,6 +67,33 @@ export const useCourseStore = () => {
         }
     }
 
+    const setActiveCourse = (course) => {
+        dispatch(onSetActiveCourse(course))
+    }
+
+    const setActiveUnit = (unit) => {
+        dispatch(onSetActiveUnit(unit));
+    }
+
+    const setActiveAssignment = (assignment) => {
+        dispatch(onSetActiveAssignment(assignment));
+    }
+
+    const setActiveQuiz = (quiz) => {
+        dispatch(onSetActiveQuiz(quiz));
+    }
+
+    const getAssignments = () => {
+        const assignments = [];
+        if (activeCourse) {
+            activeCourse?.units?.map((unit) => {
+                unit?.assignments.map(assignment => assignments.push(assignment));
+            })
+        }
+
+        return assignments;
+    }
+
 
 
 
@@ -71,6 +101,10 @@ export const useCourseStore = () => {
         //* Propiedades
         courses,
         activeCourse,
+        activeAssignment,
+        activeQuiz,
+        activeUnit,
+        assignments: getAssignments(),
         isLoading,
         errorMessage,
         messageSaved,
@@ -80,7 +114,11 @@ export const useCourseStore = () => {
         startLoadingCourseById,
         startLoadingCoursesByUser,
         startLoadingAssignmentById,
-        startLoadingQuizById
+        startLoadingQuizById,
+        setActiveCourse,
+        setActiveAssignment,
+        setActiveQuiz,
+        setActiveUnit
 
 
     }

@@ -1,7 +1,9 @@
 import React from 'react';
 import classes from '../../assets/css/courses/CourseUnit.module.css';
+import { useNavigate } from 'react-router-dom';
+import { useCourseStore } from '../../../hooks/useCourseStore';
 
-const CourseUnit = ({ unitNumber, unitTitle,unitTime}) => {
+const CourseUnit = ({ unit, unitNumber, unitTitle, unitTime, id, courseId }) => {
   let color = '';
   switch (unitNumber) {
     case 1:
@@ -26,8 +28,20 @@ const CourseUnit = ({ unitNumber, unitTitle,unitTime}) => {
       color = '';
   }
 
+  const navigate = useNavigate();
+
+
+  const {
+    setActiveUnit
+  } = useCourseStore();
+  const onClick = () => {
+
+    navigate(`Units/${id}`)
+    setActiveUnit(unit);
+  }
+
   return (
-    <div className={classes.unitContainer}>
+    <div className={classes.unitContainer} style={{ cursor: 'pointer' }} onClick={onClick}>
       <div className={classes.unit} style={{ backgroundColor: color }}>
         {unitNumber}
       </div>

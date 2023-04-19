@@ -5,6 +5,7 @@ export const courseSlice = createSlice({
     initialState: {
         courses: [],
         activeCourse: null,
+        activeUnit: null,
         activeAssignment:null,
         activeQuiz:null,
         messageSaved: '',
@@ -31,7 +32,11 @@ export const courseSlice = createSlice({
             state.activeCourse = payload
             state.isLoading = false;
         },
-        onSetActiveaAssignment: (state, { payload }) => {
+        onSetActiveUnit: (state, { payload }) => {
+            state.activeUnit = payload
+            state.isLoading = false;
+        },
+        onSetActiveAssignment: (state, { payload }) => {
             state.activeAssignment = payload
             state.isLoading = false;
         },
@@ -52,7 +57,8 @@ export const {
     onLoadCourses,
     onSetActiveCourse,
     onSetActiveQuiz,
-    onSetActiveaAssignment,
+    onSetActiveUnit,
+    onSetActiveAssignment,
     onClearCourses 
 } = courseSlice.actions;
 //! https://react-redux.js.org/tutorials/quick-start

@@ -17,7 +17,7 @@ const UnitsBox = () => {
       <div className={classes.unitContent}>
         {
           activeCourse?.units.map((unit,index) => (
-            <CourseUnit unitNumber={index + 1} unitTitle={unit.title} unitTime={30} />
+            <CourseUnit unit={unit} unitNumber={index + 1} unitTitle={unit.title} unitTime={30} id={unit.id} courseId={unit.courseId} />
           ))
         }
         {/* <CourseUnit unitNumber={1} unitTitle={activeCourse?.units[0].title} unitTime={30} />

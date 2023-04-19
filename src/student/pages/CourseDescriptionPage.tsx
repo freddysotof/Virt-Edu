@@ -15,7 +15,8 @@ function CourseDescriptionPage() {
 
   const {
     startLoadingCourseById,
-    activeCourse
+    activeCourse,
+    setActiveCourse
   } = useCourseStore();
 
   useEffect(() => {
@@ -26,19 +27,12 @@ function CourseDescriptionPage() {
     
   }, [])
   
-  // useEffect(() => {
-  //   return async () => {
-  //     
-  //   }
-   
-  // }, [id])
-  
 
   const onNavigateBack = ()=>{
+    setActiveCourse(null);
     navigate(-1);
   }
 
-  console.log(activeCourse);
 
   if (!id)
     return <Navigate to="/Courses" />
@@ -51,7 +45,7 @@ const imageUrl = activeCourse?.photoUrl;
       <div className={classes.mainContainer}>
       <div className={classes.head}>
       
-  <FiArrowLeft className={`${classes.icon} ${classes.iconArrow}`} />
+  <FiArrowLeft className={`${classes.icon} ${classes.iconArrow}`} style={{cursor:'pointer'}} onClick={onNavigateBack} />
 
 
       <h2 className={classes.courseTitle}>{activeCourse?.code}</h2>

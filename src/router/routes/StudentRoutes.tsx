@@ -10,10 +10,11 @@ import GradePage from '../../student/pages/GradePage'
 import { ProfileLayout } from '../../layout/ProfileLayout'
 import CourseDetailPage from '../../student/pages/CourseDetailPage'
 import CourseDescriptionPage from '../../student/pages/CourseDescriptionPage'
-import AssignmentPage from '../../student/pages/AssignmentPage'
+import AssignmentPage from '../../student/pages/Assignments'
 import AssignmentEditPage from '../../student/pages/AssignmentEditPage'
 import GradeDetailPage from '../../student/pages/GradeDetailPage'
-import AssignmentList from '../../student/pages/AssignmentList'
+import AssignmentList from '../../student/pages/UnitPage'
+import UnitPage from '../../student/pages/UnitPage'
 
 // const {BackTop} = FloatButton;
 export const StudentRoutes = () => {
@@ -29,6 +30,7 @@ export const StudentRoutes = () => {
                     <Route path='/Courses/:id/Details' element={<CourseDetailPage />}></Route>
                     <Route path='/Courses/:id/Description' element={<CourseDescriptionPage />}></Route>
                     <Route path='/Courses/:id' element={<CourseDescriptionPage />}></Route>
+                    <Route path='/Courses/:courseId/Units/:unitId' element={<UnitPage />}></Route>
                     <Route path='/Messages' element={<MessagePage />}></Route>
                     <Route path='/Schedule' element={<SchedulePage />}></Route>
                     <Route path='/Grades' element={<GradePage />}></Route>
